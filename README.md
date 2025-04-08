@@ -1,92 +1,78 @@
-# React Vitest Template
+# CampusLoop
 
-A starter template for building React apps with Vite. Includes Vitest for unit testing and
-a hefty .gitignore file.
+CampusLoop is a React-based web application for university students to discover and share upcoming campus events in one place. Whether it's club tryouts, guest speakers, or any other gathering, CampusLoop keeps students in the loop.
 
-# Requirements
+## Table of Contents
+1. [Features](#features)
+2. [Getting Started](#getting-started)
+3. [Project Structure](#project-structure)
+4. [Usage](#usage)
+5. [Testing](#testing)
+6. [License](#license)
 
-Node 20 or greater.
+---
 
-## Usage
+## Features
+- **Discover** new upcoming events on campus
+- **Post** events to share them with others
+- **Filter** and **search** events by keywords, organization, date, and more
+- **Save** events for future reference
 
-```
-mkdir your-app-name
-cd your-app-name
-npx degit criesbeck/react-vitest
-npm install
-```
-If the third step hangs after printing ``> cloned criesbeck/react-vitest#HEAD``, 
-just control-C to exit then run ``npm install``.
+### User Persona
+> Jerry is a freshman at Northwestern who wants to get involved on campus but is overwhelmed by the different event announcements scattered across websites and social media. He misses a tennis club tryout because he only finds out about it after the fact. He wishes there were a single, easy-to-navigate platform that keeps all campus events in one place.
 
-## Test
+### How CampusLoop Helps
+- Jerry can see all events in a centralized feed.
+- He can filter events by category or organization (like the tennis club).
+- He can mark events that interest him and view them later.
 
-Verify that the initial app works. Run
-
-```
-npm start
-```
-
-and open the URL displayed.
-
-Verify that the unit tests work with
-
-```
-npm test
-```
-
-Two tests should run and pass. 
-
-## Scripts
-
-**package.json** defines the following scripts:
-
-| Script           | Description                                         |
-| -----------------| --------------------------------------------------- |
-| npm start        | Runs the app in the development mode.               |
-| npm run dev      | Runs the app in the development mode.               |
-| npm run build    | Builds the app for production to the `dist` folder. |
-| npm run serve    | Serves the production build from the `dist` folder. |
-| npm test         | Starts a Jest-like test loop                        |
-| npm run coverage | Runs the tests, displays code coverage results      |
+---
+## Technology Stack
+### Frontend
 
 
-## Git
+### Backend
 
-If everything is working, set up [your local and remote repositories](https://docs.github.com/en/get-started/importing-your-projects-to-github/importing-source-code-to-github/adding-locally-hosted-code-to-github#adding-a-local-repository-to-github-using-git).
 
-## Folder Structure
 
-```
-your-app-name
-├── node_modules
-├── public
-│   ├── favicon.svg
+## Getting Started
+### Prerequisites
+- Node.js v20 or later
+
+### Installation
+1. **Clone the repo**:
+   ```bash
+   git clone https://github.com/your-username/nu394-s2025tth-campusloop.git
+   cd nu394-s2025tth-campusloop
+   npm install
+   ```
+
+### Project Structure
+nu394-s2025tth-campusloop/
+├── README.md           # Project overview
+├── index.html          # Application entry point
+├── package.json        # NPM scripts and dependencies
+├── vite.config.js      # Vite configuration
+├── public/
 │   └── robots.txt
-└── src
+└── src/
     ├── App.css
     ├── App.jsx
+    ├── App.test.jsx
     ├── index.css
     ├── index.jsx
-    └── logo.svg
-├── .gitignore
-├── index.html
-├── package.json
-├── README.md
-├── vite.config.js
+    └── components/
+        ├── EventCard.css
+        └── EventCard.jsx
+
+### Usage
+```bash
+npm start
+npm run build
 ```
 
-## Credits
 
-React-Vitest built and maintained by [Chris Riesbeck](https://github.com/criesbeck).
-
-Inspired by [SafdarJamal/vite-template-react](https://github.com/SafdarJamal/vite-template-react).
-Expanded to include Vitest and some sample tests.
-
-Thanks to Rich Harris for [degit](https://www.npmjs.com/package/degit).
-
-Gitignore file created with [the Toptal tool](https://www.toptal.com/developers/gitignore/api/react,firebase,visualstudiocode,macos,windows).
-
-
-## License
-
-This project is licensed under the terms of the [MIT license](./LICENSE).
+### Testing
+```bash
+npm test
+```
