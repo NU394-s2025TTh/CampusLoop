@@ -5,10 +5,10 @@ import { VscSmiley } from "react-icons/vsc";
 import "../App.css"
 import React from 'react';
 
-export function Header() {
+export function Header({name}) {
   return (
     <div className="App-header">
-      <h1>Stay in the Loop</h1>
+      <h1>Stay in the Loop, {name}</h1>
       <div className="header-buttons">
         <button>
             <FaCalendarAlt />
