@@ -27,6 +27,13 @@ CampusLoop is a React-based web application for university students to discover 
 - He can mark events that interest him and view them later.
 
 ---
+## Technology Stack
+### Frontend
+
+
+### Backend
+
+
 
 ## Getting Started
 ### Prerequisites
