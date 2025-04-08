@@ -1,0 +1,123 @@
+/* home.css */
+
+/* Overall page container to center content and set a background */
+.home-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-family: Arial, sans-serif;
+  background-color: #f8f6ff;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Header section with greeting text */
+.header {
+  text-align: left;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #4f327b;
+}
+
+.header h1 {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Top navigation (icons + labels) */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #efeafe;
+  border-radius: 8px;
+  padding: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.top-nav .nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #4f327b;
+  font-size: 0.8rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.top-nav .nav-item:hover {
+  color: #3c2561;
+}
+
+/* Content area to list events */
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem; /* space for bottom nav if needed */
+}
+
+/* Individual event card styling */
+.event-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Image within the event card */
+.event-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  object-fit: cover;
+}
+
+/* Event title, date, time, location styling */
+.event-card h3 {
+  font-size: 1rem;
+  margin: 0 0 0.25rem 0;
+  color: #4f327b;
+}
+
+.event-meta {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.event-location {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* Bottom navigation (if present) */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px; /* match container width */
+  max-width: 100%;
+  background-color: #efeafe;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-top: 1px solid #ddd;
+}
+
+.bottom-nav .nav-icon {
+  color: #4f327b;
+  text-decoration: none;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.bottom-nav .nav-icon:hover {
+  color: #3c2561;
+}
