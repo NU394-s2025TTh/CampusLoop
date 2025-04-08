@@ -1,9 +1,10 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import React from 'react';
 import { useState } from 'react';
-import { EventCard } from './components/EventCard';
-import { Header } from './components/Header';
-import { NavBar } from './components/NavBar';
+import { EventCard } from './components/EventCard/EventCard';
+import { Header } from './components/Header/Header';
+import { NavBar } from './components/NavBar/NavBar';
 import img from '../assets/event.jpg';
 
 
