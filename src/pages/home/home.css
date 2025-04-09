@@ -1,12 +1,10 @@
-/* home.css */
-
 /* Overall page container to center content and set a background */
 .home-container {
   max-width: 400px;
   margin: 0 auto;
-  padding: 0 1rem;
-  font-family: Arial, sans-serif;
-  background-color: #f8f6ff;
+  padding: 1rem 1rem 1rem;
+  font-family: Lexend, sans-serif;
+  background-color: #E4E0EE;
   min-height: 100vh;
   box-sizing: border-box;
 }
@@ -16,13 +14,13 @@
   text-align: left;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  color: #4f327b;
+  color: #401F68;
 }
 
 .header h1 {
   font-size: 1.2rem;
   margin: 0;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 /* Top navigation (icons + labels) */
@@ -30,7 +28,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #efeafe;
+  background-color: #E4E0EE;
   border-radius: 8px;
   padding: 0.5rem;
   margin-bottom: 1.25rem;
@@ -54,6 +52,7 @@
 .events-list {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
   margin-bottom: 3rem; /* space for bottom nav if needed */
 }
@@ -61,7 +60,7 @@
 /* Individual event card styling */
 .event-card {
   background-color: #ffffff;
-  border-radius: 8px;
+  border-radius: 15px;
   padding: 0.75rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
@@ -69,12 +68,12 @@
 /* Image within the event card */
 .event-card img {
   width: 100%;
-  border-radius: 6px;
-  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  margin-bottom: 0rem;
   object-fit: cover;
 }
 
-/* Event title, date, time, location styling */
+/* Event title, date, time, location styling*/
 .event-card h3 {
   font-size: 1rem;
   margin: 0 0 0.25rem 0;
@@ -100,7 +99,7 @@
   transform: translateX(-50%);
   width: 400px; /* match container width */
   max-width: 100%;
-  background-color: #efeafe;
+  background-color: #E4E0EE;
   display: flex;
   justify-content: space-around;
   align-items: center;

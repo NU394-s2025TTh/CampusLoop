@@ -1,25 +1,30 @@
-import { FaCalendarAlt } from "react-icons/fa";
-import { FaPlus } from "react-icons/fa";
-import { FaHeart } from "react-icons/fa";
-import { VscSmiley } from "react-icons/vsc";
+import { FaRegCalendar } from "react-icons/fa6";
+import { FaFire } from "react-icons/fa6";
+import { FaRegHeart } from "react-icons/fa";
+import { FaRegSmile } from "react-icons/fa";
 import React from 'react';
+import "./Header.css"
 
 export function Header({name}) {
   return (
     <div className="">
       <h1>Stay in the Loop, {name}</h1>
       <div className="header-buttons">
-        <button>
-            <FaCalendarAlt />
+        <button className="header-icon">
+            <FaRegCalendar className="icon"/>
+            <span className="icon-label">This week</span>
         </button>
-        <button>
-            <FaPlus />
+        <button className="header-icon">
+            <FaFire className="icon"/>
+            <span className="icon-label">New</span>
         </button>
-        <button>
-            <FaHeart />
+        <button className="header-icon">
+            <FaRegHeart className="icon"/>
+            <span className="icon-label">Most saved</span>
         </button>
-        <button>
-            <VscSmiley />
+        <button className="header-icon">
+            <FaRegSmile className="icon"/>
+            <span className="icon-label">Free events</span>
       </button>
       </div>
     </div>
