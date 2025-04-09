@@ -6,6 +6,7 @@ import { Header } from './components/Header/Header';
 import { NavBar } from './components/NavBar/NavBar';
 import img from '../assets/event.jpg';
 import Home from "./pages/home/home"
+import Profile from "./pages/profile/profile"
 // import './App.css';
 
 
@@ -14,6 +15,9 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+      </Routes>
+      <Routes>
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
   );
