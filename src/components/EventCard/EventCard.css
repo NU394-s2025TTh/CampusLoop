@@ -1,29 +1,34 @@
 .event-card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  border: 1px solid #ffffff;
   padding: 16px;
   max-width: 300px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
-  
+  font-family: Lexend, sans-serif;  
 }
 
 .event-card img {
   width: 100%;
-  border-radius: 8px;
-  margin-bottom: 12px;
-}
-
-.event-card .name {
-  font-size: 1.5rem;
-  font-weight: bold;
+  border-radius: 10px;
   margin-bottom: 8px;
 }
 
-.event-card .description {
+.event-card .name {
+  font-size: 1.2rem;
+  color: #401F68;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.event-card .datetime {
   font-size: 1rem;
-  color: #555;
-  margin-bottom: 12px;
+  color: #8825FF;
+  margin-bottom: 8px;
+}
+
+.event-card .location {
+  font-size: 0.8rem;
+  color: #401F6899;
+  margin-bottom: 6px;
 }
 
 .event-card .link {

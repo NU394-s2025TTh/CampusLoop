@@ -1,3 +1,29 @@
-.navbar {
-  background-color: black;
+
+.navbar-buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 0.75rem 1rem;
+  background-color: #E4E0EE;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.nav-icon {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #401F68;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-icon:hover {
+  color: #ffffff;
+}
+
+.icon {
+  font-size: 1.25rem;
 }

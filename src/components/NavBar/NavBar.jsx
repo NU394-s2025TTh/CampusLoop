@@ -1,25 +1,25 @@
 import "./NavBar.css"
 
-import { IoHomeOutline } from "react-icons/io5";
+import { FaHome } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
-import { FaRegSave } from "react-icons/fa";
-import { CgProfile } from "react-icons/cg";
+import { FaBookmark } from "react-icons/fa6";
+import { IoPerson } from "react-icons/io5";
 
 export function NavBar() {
   return (
-    <div className="navbar">
-        <footer>
-          <button>
-            <IoHomeOutline />
+    <div className="">
+        <footer className="navbar-buttons">
+          <button className="nav-icon">
+            <FaHome className="icon"/>
           </button>
-          <button>
-            <FaSearch />
+          <button className="nav-icon">
+            <FaSearch className="icon"/>
           </button>
-          <button>
-            <FaRegSave />
+          <button className="nav-icon">
+            <FaBookmark className="icon"/>
           </button>
-          <button>
-            <CgProfile />
+          <button className="nav-icon">
+            <IoPerson className="icon"/>
           </button>
         </footer>
     </div>

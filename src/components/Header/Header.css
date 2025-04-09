@@ -1,0 +1,29 @@
+.header-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 1rem 0.5rem;
+    gap: 1.5rem;
+  }
+  
+  .header-icon {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: #401F68;
+  }
+  
+  .header-icon:hover {
+    color: #ffffff;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+  }
+
+  .icon-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
