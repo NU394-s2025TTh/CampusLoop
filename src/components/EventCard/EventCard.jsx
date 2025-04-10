@@ -19,8 +19,7 @@ export function EventCard({ image, name, date, time, location, description, link
       <h1 className="name"> {name}</h1>
       <p className="datetime"> {date} | {time} </p>
       <p className="location"> {location}</p>
-      <p>{description}</p>
-      <a href={linkToTicket}>Link to Ticket</a>
+
       </div>
     </div>
   );

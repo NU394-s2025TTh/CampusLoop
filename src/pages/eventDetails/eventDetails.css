@@ -1,9 +1,70 @@
+/* Container for the entire event details page */
+.event-details-container {
+  background-color: transparent;
+  max-width: 500px;
+  max-height: 800px;
+  margin: 50px auto;           /* Centers the container horizontally and adds vertical spacing */
+  margin-top: 0px;
+  padding: 20px;
+  border-radius: 20px;
+
+}
+
+/* Image styles: Full width with fixed height and cropping where necessary */
 .event-details-image {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    object-fit: cover;
-    display: block;
-  }
-  
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Title styling: Bold and centered for visual impact */
+.event-details-title {
+  font-size: 2rem;
+  color: #333333;
+  margin: 20px 0 10px;
+  text-align: center;
+}
+
+/* Date and time: Subdued and centered */
+.event-details-datetime {
+  font-size: 1rem;
+  color: #666666;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Location details: Centered with a color that complements the date/time */
+.event-details-location {
+  font-size: 1rem;
+  color: #444444;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Description: Legible text with appropriate line-height and justified alignment */
+.event-details-description {
+  font-size: 1.1rem;
+  color: #555555;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+
+/* Ticket link: A prominent call-to-action button style */
+.event-details-ticket-link {
+  display: inline-block;
+  background-color: #401F68;
+  color: #ffffff;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the ticket link to enhance interactivity */
+.event-details-ticket-link:hover {
+  background-color: #2C1342;
+}

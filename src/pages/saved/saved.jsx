@@ -16,7 +16,7 @@ function Saved() {
         time: "8:00pm",
         location: "Welsh Ryan Arena",
         description: "Join us at Welsh-Ryan Arena to support the Wildcats as they take on Big Ten rival Iowa in a high-stakes showdown!",
-        ticketLink: "https://www.nusports.com/tickets"
+        linkToTicket: "https://www.nusports.com/tickets"
       },
       {
         id: 1,
@@ -26,7 +26,7 @@ function Saved() {
         time: "8:00pm",
         location: "Welsh Ryan Arena",
         description: "Don’t miss the action as NU battles Iowa on home turf. Wear your purple and bring the Wildcat spirit!",
-        ticketLink: "https://www.nusports.com/tickets"
+        linkToTicket: "https://www.nusports.com/tickets"
       },
       {
           id: 2,
@@ -36,7 +36,7 @@ function Saved() {
           time: "7:30pm",
           location: "Pick-Staiger Concert Hall",
           description: "Enjoy a night of stunning vocals and harmonies as Northwestern’s top a cappella groups perform their spring sets.",
-          ticketLink: "https://www.nusports.com/tickets"
+          linkToTicket: "https://www.nusports.com/tickets"
         },
         {
           id: 3,
@@ -46,7 +46,7 @@ function Saved() {
           time: "9:00pm",
           location: "Norris Center",
           description: "Unwind with smooth tunes, snacks, and good vibes at Jazz Night. Featuring student musicians in an intimate lounge setting.",
-          ticketLink: "https://www.nusports.com/tickets"
+          linkToTicket: "https://www.nusports.com/tickets"
         }
     ];
 
@@ -64,7 +64,7 @@ function Saved() {
             time={event.time}
             location={event.location}
             description={event.description}
-            ticketLink={event.ticketLink}
+            linkToTicket={event.linkToTicket}
           />
         ))}
       </div>

@@ -9,7 +9,7 @@ function EventDetails() {
     return <p>No event data found.</p>;
   }
 
-  const { image, name, date, time, location, description, ticketLink } = state;
+  const { image, name, date, time, location, description, linkToTicket } = state;
 
   return (
     
@@ -19,9 +19,9 @@ function EventDetails() {
       <p className="event-details-datetime">{date} | {time}</p>
       <p className="event-details-location">{location}</p>
       <p className="event-details-description">{description}</p>
-      {ticketLink && (
+      {linkToTicket && (
         <a 
-            href={ticketLink} 
+            href={linkToTicket} 
             target="_blank" 
             rel="noopener noreferrer"
             className="event-details-ticket-link"
@@ -29,6 +29,7 @@ function EventDetails() {
             Get Tickets
         </a>
         )}
+        
     </div>
   );
 }

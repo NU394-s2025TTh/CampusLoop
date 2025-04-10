@@ -10,9 +10,14 @@ function Layout() {
       <div className="inner-container">
         <div className="scrollable-content">
           <Outlet />
+           
+          
         </div>
-        <NavBar />
+        <NavBar /> 
+        
       </div>
+      
+      
     </div>
   );
 }

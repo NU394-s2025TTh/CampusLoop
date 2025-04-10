@@ -7,9 +7,12 @@ import { IoPerson } from "react-icons/io5";
 
 export function NavBar() {
   return (
-    <div className="">
+    <div>
+        <header>
+          <title>CampusLoop</title>
+        </header>
+
         <footer className="navbar-buttons">
-          
           <Link to="/" className="nav-icon">
             <FaHome className="icon" />
           </Link>
@@ -24,5 +27,6 @@ export function NavBar() {
           </Link>
         </footer>
     </div>
+
   );
 }

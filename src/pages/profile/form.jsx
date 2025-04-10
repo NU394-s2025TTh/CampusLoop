@@ -13,27 +13,13 @@ export default function Form() {
     const eventName = formData.get("eventName");
     const description = formData.get("description");
     const linkToTicket = formData.get("linkToTicket");
-    const imageFile = formData.get("image");
+    const imageUrl = formData.get("image");
     const date = formData.get("date");
     const time = formData.get("time");
     const location = formData.get("location");
     
     // Create a unique identifier for storage; consider using a library like uuid in production
     const eventId = eventName + Date.now();  
-
-    let imageUrl = '';
-    if (imageFile && imageFile.size > 0) {
-      try {
-        // Create a reference in your Firebase Storage under 'events/{eventId}'
-        const imageStorageRef = storageRef(storage, `events/${eventId}`);
-        // Upload the image file to Firebase Storage
-        const snapshot = await uploadBytes(imageStorageRef, imageFile);
-        // Get the public download URL for the uploaded image
-        imageUrl = await getDownloadURL(snapshot.ref);
-      } catch (error) {
-        console.error("Error uploading image:", error);
-      }
-    }
 
     // Build the new event object with the download URL and form data
     const newEvent = {
@@ -63,7 +49,7 @@ export default function Form() {
       <input type="text" name="eventName" placeholder="Event Name" required />
       <textarea name="description" placeholder="Description" required />
       <input type="url" name="linkToTicket" placeholder="Link to Tickets"  />
-      <input type="file" name="image" />
+      <input type="url" name="image" placeholder='Link to Image'  required/>
       <input type="date" name="date" required />
       <input type="time" name="time" required />
       <input type="text" name="location" placeholder="Location" required />

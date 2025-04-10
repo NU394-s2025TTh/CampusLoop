@@ -19,19 +19,20 @@
   
   .inner-container {
     background-color: #E4E0EE;
-    max-width: 400px;
+    max-width: 450px;
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     position: relative;
-    border-radius: 0; /* optional: add rounded corners */
+    border: 1px solid;
+    border-radius: 20px; /* optional: add rounded corners */
   }
   
   .scrollable-content {
     flex: 1;
     overflow-y: auto;
-    padding: 1rem;
+    padding: 0;
   }
   
   

@@ -1,23 +1,28 @@
-
 .navbar-buttons {
   display: flex;
-  justify-content: space-around;
-  padding: 0.75rem 1rem;
+  /* You can use space-evenly or even remove it entirely when each item is equal width */
+  justify-content: space-evenly;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.1rem;
+  padding-right: 0rem;
   background-color: #E4E0EE;
   position: fixed;
+  border-radius: 20px;
+
+  width: 410px;
   bottom: 0;
-  left: 0;
-  right: 0;
 }
 
 .nav-icon {
+  flex: 1;                      /* Make each icon container take equal space */
+  display: flex;
+  align-items: center;          /* Vertical centering */
+  justify-content: center;      /* Horizontal centering */
   background-color: transparent;
   border: none;
   cursor: pointer;
   color: #401F68;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .nav-icon:hover {
@@ -26,4 +31,6 @@
 
 .icon {
   font-size: 1.25rem;
+  width: 1.25rem;   /* Forces the SVG to a fixed width */
+  height: 1.25rem;  /* Forces the SVG to a fixed height */
 }

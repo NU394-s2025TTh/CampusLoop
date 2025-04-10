@@ -8,6 +8,7 @@ import Explore from './pages/explore/explore';
 import Saved from './pages/saved/saved'; // or adjust the path/capitalization if needed
 import EventDetails from './pages/eventDetails/eventDetails';
 
+
 // import './App.css';
 
 
@@ -38,6 +39,7 @@ function App() {
         </Route>
       </Routes>
     </Router>
+    
   );
 }
 
