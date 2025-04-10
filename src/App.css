@@ -13,6 +13,24 @@
   }
 }
 
+/* Outer white background container */
+.app-wrapper {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+/* Inner purple card container */
+.inner-container {
+  background-color: #E4E0EE;
+  max-width: 400px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
 .App-header {
   background-color: white;
   min-height: 100vh;
