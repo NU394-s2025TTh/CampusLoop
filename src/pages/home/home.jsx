@@ -43,7 +43,7 @@ function Home() {
   return (
     <div className="home-container">
       <div className="header">
-        <Header name="Sam" />
+        <Header name="Desmond" />
       </div>
       <div className="top-nav">
         {/* Navigation items */}
