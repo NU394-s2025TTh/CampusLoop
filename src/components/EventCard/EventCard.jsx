@@ -3,7 +3,7 @@ import './EventCard.css';
 import React from 'react';
 
 
-export function EventCard({image, name, date, time, location}) {
+export function EventCard({image, name, date, time, location, description, linkToTicket}) {
   return (
     <div className="event-card">
       <img src={image} alt={name} className="event-card-image" />
@@ -11,6 +11,8 @@ export function EventCard({image, name, date, time, location}) {
       <h1 className="name"> {name}</h1>
       <p className="datetime"> {date} | {time} </p>
       <p className="location"> {location}</p>
+      <p>{description}</p>
+      <a href={linkToTicket}>Link to Ticket</a>
       </div>
     </div>
   );

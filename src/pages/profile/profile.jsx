@@ -2,7 +2,7 @@ import './profile.css';
 import Form from "./form"
 import React, {useState} from 'react'
 
-export default function Profile() {
+export default function Profile({ addEvent }) {
   const [showForm, setShowForm] = useState(false);
 
   const Profile = {
@@ -27,7 +27,7 @@ export default function Profile() {
         
       </div>
       <button onClick={toggleForm}>{showForm ? "Hide Form" : "Create Event"}</button>
-      {showForm && <Form />}
+      {showForm && <Form addEvent={addEvent} />}
     </div>
   );
 }

@@ -19,7 +19,7 @@ export function NavBar() {
             <FaBookmark className="icon"/>
           </button>
           <button className="nav-icon">
-            <IoPerson className="icon"/>
+            <a href="./profile"><IoPerson className="icon"/></a>
           </button>
         </footer>
     </div>
