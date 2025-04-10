@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+
+import React from 'react';
+import { useState, useEffect } from 'react';
 import { EventCard } from '../../components/EventCard/EventCard';
 import { Header } from '../../components/Header/Header';
 import { NavBar } from '../../components/NavBar/NavBar';
