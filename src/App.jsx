@@ -1,11 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import React from 'react';
-import { useState } from 'react';
-import { EventCard } from './components/EventCard/EventCard';
-import { Header } from './components/Header/Header';
-import { NavBar } from './components/NavBar/NavBar';
-import img from '../assets/event.jpg';
 import Layout from './layouts/Layout';
 import Home from "./pages/home/home"
 import Profile from "./pages/profile/profile"
@@ -39,7 +34,7 @@ function App() {
           <Route path="explore" element={<Explore />} />
           <Route path="saved" element={<Saved />} />
           <Route path="profile" element={<Profile />} />
-          <Route path="/event-details" element={<EventDetails />} />
+          <Route path="event-details" element={<EventDetails />} />
         </Route>
       </Routes>
     </Router>

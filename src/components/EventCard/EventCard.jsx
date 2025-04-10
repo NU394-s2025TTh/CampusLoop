@@ -2,16 +2,16 @@ import './EventCard.css';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export function EventCard({ image, name, date, time, location, description, ticketLink }) {
+export function EventCard({ image, name, date, time, location, description, linkToTicket }) {
   const navigate = useNavigate();
 
   const handleClick = () => {
     navigate('/event-details', {
-      state: { image, name, date, time, location, description, ticketLink }
+      state: { image, name, date, time, location, description, linkToTicket }
     });
   };
 
-export function EventCard({image, name, date, time, location, description, linkToTicket}) {
+
   return (
     <div className="event-card" onClick={handleClick}>
       <img src={image} alt={name} className="event-card-image" />
