@@ -5,6 +5,8 @@ import { Header } from "../../components/Header/Header";
 import { NavBar } from "../../components/NavBar/NavBar";
 import "./home.css";
 import { db } from "../../firebase";
+import BrowseCategories from "../../components/BrowseCategories/BrowseCategories";
+
 
 import { collection, getDocs, query, orderBy } from "firebase/firestore";
 
@@ -56,7 +58,7 @@ function Home() {
           <button className="filter-chip">More Filters</button>
         </div>
       </div>
-      <div className="events-list">
+      {/* <div className="events-list">
         {events.map((event) => (
           <EventCard
             key={event.key}
@@ -69,7 +71,9 @@ function Home() {
             linkToTicket={event.linkToTicket}
           />
         ))}
-      </div>
+      </div> */}
+      <BrowseCategories events={events} /> 
+
     </div>
   );
 }
