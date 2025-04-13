@@ -3,11 +3,10 @@
   background-color: transparent;
   max-width: 500px;
   max-height: 800px;
-  margin: 50px auto;           /* Centers the container horizontally and adds vertical spacing */
+  margin: 50px auto; /* Centers the container horizontally and adds vertical spacing */
   margin-top: 0px;
   padding: 20px;
   border-radius: 20px;
-
 }
 
 /* Image styles: Full width with fixed height and cropping where necessary */
@@ -55,7 +54,7 @@
 /* Ticket link: A prominent call-to-action button style */
 .event-details-ticket-link {
   display: inline-block;
-  background-color: #401F68;
+  background-color: #401f68;
   color: #ffffff;
   padding: 12px 24px;
   text-decoration: none;
@@ -66,5 +65,5 @@
 
 /* Hover effect for the ticket link to enhance interactivity */
 .event-details-ticket-link:hover {
-  background-color: #2C1342;
+  background-color: #2c1342;
 }

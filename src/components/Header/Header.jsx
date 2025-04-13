@@ -2,14 +2,14 @@ import { FaRegCalendar } from "react-icons/fa6";
 import { FaFire } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa";
 import { FaRegSmile } from "react-icons/fa";
-import React from 'react';
-import "./Header.css"
+import React from "react";
+import "./Header.css";
 
-export function Header({name}) {
+export function Header({ name }) {
   return (
     <div className="">
       <h1>Stay in the Loop, {name}</h1>
-      <div className="header-buttons">
+      {/* <div className="header-buttons">
         <button className="header-icon">
             <FaRegCalendar className="icon"/>
             <span className="icon-label">This week</span>
@@ -26,7 +26,7 @@ export function Header({name}) {
             <FaRegSmile className="icon"/>
             <span className="icon-label">Free events</span>
       </button>
-      </div>
+      </div> */}
     </div>
   );
 }

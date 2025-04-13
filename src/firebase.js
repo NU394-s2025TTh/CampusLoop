@@ -1,8 +1,8 @@
 // src/firebase.js
-import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
-import { getAnalytics } from 'firebase/analytics';
-import { getStorage } from 'firebase/storage';
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { getAnalytics } from "firebase/analytics";
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDxXspEqc5nDQOJ6sHvJIlExWI9245nsBQ",
@@ -11,7 +11,7 @@ const firebaseConfig = {
   storageBucket: "campusloop-42891.firebasestorage.app",
   messagingSenderId: "520501738089",
   appId: "1:520501738089:web:40f5bf830249475c2600f8",
-  measurementId: "G-ZWGVG0KXTN"
+  measurementId: "G-ZWGVG0KXTN",
 };
 
 // Initialize Firebase

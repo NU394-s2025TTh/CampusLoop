@@ -3,7 +3,7 @@
   margin-top: 40px;
   padding: 10px; /* Slightly reduced padding */
   border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Lighter shadow for less emphasis */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow for less emphasis */
   width: 100%; /* Use the full width of the parent container */
   box-sizing: border-box; /* Includes padding in the element's width */
   display: flex;
@@ -11,7 +11,8 @@
   gap: 10px; /* Reduced gap for compact form */
 }
 
-input, textarea {
+input,
+textarea {
   font-family: Arial, sans-serif;
   padding: 8px; /* Comfortable padding, but conserves space */
   border-radius: 10px; /* Consistent with form style */

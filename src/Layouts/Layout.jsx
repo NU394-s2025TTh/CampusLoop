@@ -1,8 +1,8 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
-import { Header } from '../components/Header/Header';
-import { NavBar } from '../components/NavBar/NavBar';
-import './Layout.css';
+import React from "react";
+import { Outlet } from "react-router-dom";
+import { Header } from "../components/Header/Header";
+import { NavBar } from "../components/NavBar/NavBar";
+import "./Layout.css";
 
 function Layout() {
   return (
@@ -10,14 +10,9 @@ function Layout() {
       <div className="inner-container">
         <div className="scrollable-content">
           <Outlet />
-           
-          
         </div>
-        <NavBar /> 
-        
+        <NavBar />
       </div>
-      
-      
     </div>
   );
 }

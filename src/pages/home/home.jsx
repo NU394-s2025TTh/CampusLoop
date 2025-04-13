@@ -1,13 +1,12 @@
 // src/pages/home/home.jsx
-import React, { useState, useEffect } from 'react';
-import { EventCard } from '../../components/EventCard/EventCard';
-import { Header } from '../../components/Header/Header';
-import { NavBar } from '../../components/NavBar/NavBar';
-import './home.css';
-import { db } from '../../firebase'; 
+import React, { useState, useEffect } from "react";
+import { EventCard } from "../../components/EventCard/EventCard";
+import { Header } from "../../components/Header/Header";
+import { NavBar } from "../../components/NavBar/NavBar";
+import "./home.css";
+import { db } from "../../firebase";
 
-
-import { collection, getDocs, query, orderBy } from 'firebase/firestore';
+import { collection, getDocs, query, orderBy } from "firebase/firestore";
 
 function Home() {
   const [events, setEvents] = useState([]);
@@ -15,8 +14,8 @@ function Home() {
   useEffect(() => {
     async function fetchEvents() {
       try {
-        const eventsRef = collection(db, 'events');
-        const eventsQuery = query(eventsRef, orderBy('createdAt', 'desc'));
+        const eventsRef = collection(db, "events");
+        const eventsQuery = query(eventsRef, orderBy("createdAt", "desc"));
         const querySnapshot = await getDocs(eventsQuery);
         const eventsArray = querySnapshot.docs.map((doc) => {
           const data = doc.data();
@@ -28,7 +27,7 @@ function Home() {
             name: data.name,
             date: data.date,
             time: data.time,
-            location: data.location
+            location: data.location,
           };
         });
         setEvents(eventsArray);
@@ -36,7 +35,7 @@ function Home() {
         console.error("Error loading events:", error);
       }
     }
-  
+
     fetchEvents();
   }, []);
 
@@ -45,11 +44,20 @@ function Home() {
       <div className="header">
         <Header name="Desmond" />
       </div>
-      <div className="top-nav">
-        {/* Navigation items */}
+      <div className="search-section">
+        <input
+          type="text"
+          className="search-input"
+          placeholder="Search for an event..."
+        />
+        <div className="filter-bar">
+          <button className="filter-chip">Date</button>
+          <button className="filter-chip">Category</button>
+          <button className="filter-chip">More Filters</button>
+        </div>
       </div>
       <div className="events-list">
-        {events.map(event => (
+        {events.map((event) => (
           <EventCard
             key={event.key}
             image={event.image}
@@ -59,11 +67,9 @@ function Home() {
             location={event.location}
             description={event.description}
             linkToTicket={event.linkToTicket}
-
           />
         ))}
       </div>
-
     </div>
   );
 }

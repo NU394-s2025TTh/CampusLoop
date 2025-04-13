@@ -1,4 +1,4 @@
-import "./NavBar.css"
+import "./NavBar.css";
 import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
@@ -8,25 +8,21 @@ import { IoPerson } from "react-icons/io5";
 export function NavBar() {
   return (
     <div>
-        <header>
-          <title>CampusLoop</title>
-        </header>
+      <header>
+        <title>CampusLoop</title>
+      </header>
 
-        <footer className="navbar-buttons">
-          <Link to="/" className="nav-icon">
-            <FaHome className="icon" />
-          </Link>
-          <Link to="/explore" className="nav-icon">
-            <FaSearch className="icon" />
-          </Link>
-          <Link to="/saved" className="nav-icon">
-            <FaBookmark className="icon"/>
-          </Link>
-          <Link to="/profile" className="nav-icon">
-            <IoPerson className="icon"/>
-          </Link>
-        </footer>
+      <footer className="navbar-buttons">
+        <Link to="/" className="nav-icon">
+          <FaHome className="icon" />
+        </Link>
+        <Link to="/saved" className="nav-icon">
+          <FaBookmark className="icon" />
+        </Link>
+        <Link to="/profile" className="nav-icon">
+          <IoPerson className="icon" />
+        </Link>
+      </footer>
     </div>
-
   );
 }

@@ -6,7 +6,7 @@
   padding-bottom: 0.75rem;
   padding-left: 1.1rem;
   padding-right: 0rem;
-  background-color: #E4E0EE;
+  background-color: #e4e0ee;
   position: fixed;
   border-radius: 20px;
 
@@ -15,14 +15,14 @@
 }
 
 .nav-icon {
-  flex: 1;                      /* Make each icon container take equal space */
+  flex: 1; /* Make each icon container take equal space */
   display: flex;
-  align-items: center;          /* Vertical centering */
-  justify-content: center;      /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  justify-content: center; /* Horizontal centering */
   background-color: transparent;
   border: none;
   cursor: pointer;
-  color: #401F68;
+  color: #401f68;
 }
 
 .nav-icon:hover {
@@ -31,6 +31,6 @@
 
 .icon {
   font-size: 1.25rem;
-  width: 1.25rem;   /* Forces the SVG to a fixed width */
-  height: 1.25rem;  /* Forces the SVG to a fixed height */
+  width: 1.25rem; /* Forces the SVG to a fixed width */
+  height: 1.25rem; /* Forces the SVG to a fixed height */
 }

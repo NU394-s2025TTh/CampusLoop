@@ -1,38 +1,36 @@
 .layout-container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-  }
-  
-  .layout-content {
-    flex: 1;
-    overflow-y: auto;
-    padding: 1rem;
-  }
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
 
-  .app-wrapper {
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-  }
-  
-  .inner-container {
-    background-color: #E4E0EE;
-    max-width: 450px;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    border: 1px solid;
-    border-radius: 20px; /* optional: add rounded corners */
-  }
-  
-  .scrollable-content {
-    flex: 1;
-    overflow-y: auto;
-    padding: 0;
-  }
-  
-  
+.layout-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.app-wrapper {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.inner-container {
+  background-color: #e4e0ee;
+  max-width: 450px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid;
+  border-radius: 20px; /* optional: add rounded corners */
+}
+
+.scrollable-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0;
+}

@@ -4,7 +4,7 @@
   margin: 0 auto;
   padding: 1rem 1rem 1rem;
   font-family: sans-serif;
-  background-color: #E4E0EE;
+  background-color: #e4e0ee;
   min-height: 100vh;
   box-sizing: border-box;
 }
@@ -14,7 +14,7 @@
   text-align: left;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  color: #401F68;
+  color: #401f68;
 }
 
 .header h1 {
@@ -28,7 +28,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #E4E0EE;
+  background-color: #e4e0ee;
   border-radius: 8px;
   padding: 0.5rem;
   margin-bottom: 1.25rem;
@@ -99,7 +99,7 @@
   transform: translateX(-50%);
   width: 400px; /* match container width */
   max-width: 100%;
-  background-color: #E4E0EE;
+  background-color: #e4e0ee;
   display: flex;
   justify-content: space-around;
   align-items: center;
