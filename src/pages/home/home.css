@@ -2,9 +2,9 @@
 .home-container {
   max-width: 400px;
   margin: 0 auto;
-  padding: 1rem 1rem 1rem;
+  padding: 0rem 0rem 0rem;
   font-family: sans-serif;
-  background-color: #e4e0ee;
+  background-color: #0f0721;
   min-height: 100vh;
   box-sizing: border-box;
 }
@@ -14,7 +14,7 @@
   text-align: left;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  color: #401f68;
+  color: #e1dee5;
 }
 
 .header h1 {
@@ -28,7 +28,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #e4e0ee;
+  background-color: #0f0721;
   border-radius: 8px;
   padding: 0.5rem;
   margin-bottom: 1.25rem;
@@ -48,16 +48,16 @@
   color: #3c2561;
 }
 
-/* Content area to list events */
-.events-list {
+
+/* .events-list {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 3rem; /* space for bottom nav if needed */
+  margin-bottom: 3rem; 
 }
 
-/* Individual event card styling */
+
 .event-card {
   background-color: #ffffff;
   border-radius: 15px;
@@ -65,7 +65,7 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* Image within the event card */
+
 .event-card img {
   width: 100%;
   border-radius: 10px;
@@ -73,7 +73,7 @@
   object-fit: cover;
 }
 
-/* Event title, date, time, location styling*/
+
 .event-card h3 {
   font-size: 1rem;
   margin: 0 0 0.25rem 0;
@@ -89,7 +89,7 @@
 .event-location {
   font-size: 0.8rem;
   color: #777;
-}
+} */
 
 /* Bottom navigation (if present) */
 .bottom-nav {
@@ -99,7 +99,7 @@
   transform: translateX(-50%);
   width: 400px; /* match container width */
   max-width: 100%;
-  background-color: #e4e0ee;
+  background-color: #0f0721;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -183,4 +183,8 @@
 
 .event-form button:hover {
   background-color: #4cae4c;
+}
+
+.search-input {
+ background-color: red;
 }

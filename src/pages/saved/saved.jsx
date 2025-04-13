@@ -55,12 +55,10 @@ function Saved() {
   ];
 
   return (
-    <div className="home-container">
-      {" "}
-      {/* reuse same container for now */}
-      <div className="events-list">
-        <h2 className="saved-title">Saved Events!</h2>
+    <div className="events-list">
+      <h2 className="saved-title">Saved Events!</h2>
 
+      <div className="saved-grid">
         {events.map((event) => (
           <EventCard
             key={event.id}

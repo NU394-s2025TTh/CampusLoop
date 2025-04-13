@@ -26,9 +26,9 @@ export function EventCard({
         <h1 className="name"> {name}</h1>
         <p className="datetime">
           {" "}
-          {date} | {time}{" "}
+          {date}
         </p>
-        <p className="location"> {location}</p>
+        {/* <p className="location"> {location}</p> */}
       </div>
     </div>
   );

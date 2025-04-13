@@ -72,7 +72,14 @@ function Home() {
           />
         ))}
       </div> */}
-      <BrowseCategories events={events} /> 
+      <BrowseCategories
+        categorizedEvents={[
+          { category: "Sports", events },
+          { category: "Music", events },
+          { category: "Arts", events },
+          { category: "Campus Life", events },
+        ]}
+      />
 
     </div>
   );
