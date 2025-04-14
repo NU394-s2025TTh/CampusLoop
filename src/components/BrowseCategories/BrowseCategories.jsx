@@ -1,9 +1,12 @@
-
 import React from "react";
 import { EventCard } from "../EventCard/EventCard";
 import "./BrowseCategories.css";
+import { CiBookmark } from "react-icons/ci";
+import { useSavedEvents } from "../../context/SavedEventsContext";
 
 function BrowseCategories({ categorizedEvents }) {
+  const { addSavedEvent } = useSavedEvents();
+
   return (
     <div className="browse-categories">
       {categorizedEvents.map((categoryBlock) => (
@@ -12,7 +15,7 @@ function BrowseCategories({ categorizedEvents }) {
           <div className="category-scroll">
             {categoryBlock.events.map((event) => (
               <EventCard
-                key={event.key}
+                key={event.id}
                 image={event.image}
                 name={event.name}
                 date={event.date}
@@ -20,6 +23,8 @@ function BrowseCategories({ categorizedEvents }) {
                 location={event.location}
                 description={event.description}
                 linkToTicket={event.linkToTicket}
+                onActionClick={() => addSavedEvent(event)}
+                actionIcon={<CiBookmark />} // The bookmark icon
               />
             ))}
           </div>
@@ -30,4 +35,3 @@ function BrowseCategories({ categorizedEvents }) {
 }
 
 export default BrowseCategories;
-

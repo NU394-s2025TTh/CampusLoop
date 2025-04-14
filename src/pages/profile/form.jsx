@@ -1,5 +1,5 @@
 import "./form.css";
-import { db } from "../../firebase"; 
+import { db } from "../../firebase";
 import { collection, addDoc } from "firebase/firestore";
 
 export default function Form() {
@@ -39,7 +39,7 @@ export default function Form() {
       console.error("Error adding event:", error);
     }
 
-    console.alert("Your Event Created Succesfully!")
+    console.alert("Your Event Created Succesfully!");
   }
 
   return (

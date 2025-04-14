@@ -5,8 +5,12 @@ import img2 from "../../../assets/image5.jpg";
 import img3 from "../../../assets/image6.jpg";
 import img4 from "../../../assets/image7.jpg";
 import "./explore.css"; // Optional if you want custom styling
+import { useSavedEvents } from "../../context/SavedEventsContext";
+import { CiBookmark } from "react-icons/ci";
 
 function Explore() {
+  const { addSavedEvent } = useSavedEvents();
+
   const events = [
     {
       id: 0,
@@ -82,6 +86,8 @@ function Explore() {
             location={event.location}
             description={event.description}
             linkToTicket={event.linkToTicket}
+            onActionClick={() => addSavedEvent(event)}
+            actionIcon={<CiBookmark />}
           />
         ))}
       </div>

@@ -1,90 +1,54 @@
-/* .event-card {
-  border: 1px solid #ffffff;
-  padding: 16px;
-  width: 300px; 
-  height: 300px; 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  font-family: sans-serif;
-  overflow: hidden; 
-  cursor: pointer;
-  flex: 0 0 auto;
-scroll-snap-align: start;
-
-}
-
-.event-card img {
-  width: 100%;
-  height: 200px; 
-  object-fit: cover; 
-  border-radius: 10px;
-  margin-bottom: 8px;
-}
-
-.event-card .name {
-  font-size: 1.2rem;
-  color: #401f68;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.event-card .datetime {
-  font-size: 1rem;
-  color: #8825ff;
-  margin-bottom: 8px;
-}
-
-.event-card .location {
-  font-size: 0.8rem;
-  color: #401f6899;
-  margin-bottom: 6px;
-}
-
-.event-card .link {
-  color: #007bff;
-  text-decoration: none;
-  font-weight: bold;
-} */
-
+/* Container for the entire card */
 .event-card {
-  
-  width: 180px;
-  height: 210px;
-  background-color: #000000;
-  border-radius: 1px;
-  padding-bottom: 2.8rem;
+  position: relative;
+  width: 200px;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: #000;
+  color: #fff;
 }
 
-.event-card img {
+.event-card-image {
   width: 100%;
-  height: 200px; 
-  color: #000000;
-  object-fit: cover; 
-  border-radius: 1px;
-
+  height: 140px;
+  object-fit: cover;
+  display: block;
 }
 
-.event-card .name {
-  font-size: 0.65rem;
-  color: #fbfafd;
+.event-card-content {
+  padding: 0.75rem;
+}
+
+.event-name {
+  margin: 0;
+  font-size: 1rem;
   font-weight: bold;
-  margin-left: 0.3rem;
 }
 
-.event-card .datetime {
-  font-size: 0.65rem;
-  color: #fbfafd;
-  margin-bottom: 1px;
-  margin-left: 0.4rem;
+.event-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
 }
 
-.event-card .location {
-  font-size: 0.8rem;
-  color: #401f6899;
-  margin-bottom: 6px;
+/* Date styling */
+.event-date {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ccc;
 }
 
-.event-card .link {
-  color: #007bff;
-  text-decoration: none;
-  font-weight: bold;
-} 
+/* Bookmark button */
+.bookmark-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.bookmark-button:hover {
+  color: #ffc107;
+}

@@ -48,7 +48,6 @@
   color: #3c2561;
 }
 
-
 /* .events-list {
   display: flex;
   flex-direction: column;
@@ -186,5 +185,5 @@
 }
 
 .search-input {
- background-color: red;
+  background-color: red;
 }

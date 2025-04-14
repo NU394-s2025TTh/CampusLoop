@@ -19,24 +19,23 @@ export default function Profile({ addEvent }) {
   };
 
   function handleTabClick(tabName) {
-    setActiveTab(tabName)
-    if(tabName === "create-event"){
-      setShowPerson(false)
-      setShowForm(!showForm)
-    } else if (tabName === "your-events"){
-      setShowForm(false)
-      setShowPerson(false)
-      console.log("your events")
-    } else if (tabName === "your-profile"){
-      setShowPerson(!showPerson)
-      setShowForm(false)
-      console.log("your profile")
+    setActiveTab(tabName);
+    if (tabName === "create-event") {
+      setShowPerson(false);
+      setShowForm(!showForm);
+    } else if (tabName === "your-events") {
+      setShowForm(false);
+      setShowPerson(false);
+      console.log("your events");
+    } else if (tabName === "your-profile") {
+      setShowPerson(!showPerson);
+      setShowForm(false);
+      console.log("your profile");
     }
   }
 
-
   return (
-    <div >
+    <div>
       <div className="profile-info">
         <img src={Profile.imgSrc} alt="Profile Image" />
         <div className="text-info">
@@ -45,22 +44,24 @@ export default function Profile({ addEvent }) {
         </div>
       </div>
       <div className="profile-tabs">
-        <button 
-        className={activeTab === "create-event" ? "active-tab" : ""}
-        onClick={() => handleTabClick("create-event")}>
+        <button
+          className={activeTab === "create-event" ? "active-tab" : ""}
+          onClick={() => handleTabClick("create-event")}
+        >
           Create Event
         </button>
-        <button 
-        className={activeTab === "your-events" ? "active-tab" : ""}
-        onClick={() => handleTabClick("your-events")}>
+        <button
+          className={activeTab === "your-events" ? "active-tab" : ""}
+          onClick={() => handleTabClick("your-events")}
+        >
           Your Events
         </button>
-        <button 
-        className={activeTab === "your-profile" ? "active-tab" : ""}
-        onClick={() => handleTabClick("your-profile")}>
+        <button
+          className={activeTab === "your-profile" ? "active-tab" : ""}
+          onClick={() => handleTabClick("your-profile")}
+        >
           Your Profile
         </button>
-        
       </div>
       {showForm && <Form addEvent={addEvent} />}
       {showPerson && <Person />}

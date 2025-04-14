@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { collection, query, orderBy, startAt, endAt, getDocs,} from "firebase/firestore";
+import {
+  collection,
+  query,
+  orderBy,
+  startAt,
+  endAt,
+  getDocs,
+} from "firebase/firestore";
 import { db } from "../../firebase";
 import { EventCard } from "../../components/EventCard/EventCard";
 import "./SearchResults.css";

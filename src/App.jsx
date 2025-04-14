@@ -7,8 +7,8 @@ import Profile from "./pages/profile/profile";
 import Explore from "./pages/explore/explore";
 import Saved from "./pages/saved/saved"; // or adjust the path/capitalization if needed
 import EventDetails from "./pages/eventDetails/eventDetails";
+import { SavedEventsProvider } from "./context/SavedEventsContext";
 import SearchResults from "./pages/searchresults/searchresults";
-
 
 // import './App.css';
 
@@ -27,19 +27,21 @@ import SearchResults from "./pages/searchresults/searchresults";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        {/* Shared layout wrapper */}
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="explore" element={<Explore />} />
-          <Route path="saved" element={<Saved />} />
-          <Route path="profile" element={<Profile />} />
-          <Route path="event-details" element={<EventDetails />} />
-          <Route path="searchresults" element={<SearchResults />} />
-        </Route>
-      </Routes>
-    </Router>
+    <SavedEventsProvider>
+      <Router>
+        <Routes>
+          {/* Shared layout wrapper */}
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="explore" element={<Explore />} />
+            <Route path="saved" element={<Saved />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="event-details" element={<EventDetails />} />
+            <Route path="searchresults" element={<SearchResults />} />
+          </Route>
+        </Routes>
+      </Router>
+    </SavedEventsProvider>
   );
 }
 

@@ -1,18 +1,18 @@
 /* Container for the entire page */
 .searchresults-container {
-    max-width: 400px;
-    margin: 1rem 1rem 1rem;
-    padding: 1rem;
-    font-family: Arial, sans-serif;
-    box-sizing: border-box;
-    min-height: 100vh;
-    position: relative; /* Allows bottom nav to stay fixed */
-    gap: 1rem;
-  }
-  
-  .search-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* horizontally center each row */
-    gap: 1rem; /* space between cards */
-  }
+  max-width: 400px;
+  margin: 1rem 1rem 1rem;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  min-height: 100vh;
+  position: relative; /* Allows bottom nav to stay fixed */
+  gap: 1rem;
+}
+
+.search-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* horizontally center each row */
+  gap: 1rem; /* space between cards */
+}

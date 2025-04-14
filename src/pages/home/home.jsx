@@ -8,7 +8,6 @@ import { db } from "../../firebase";
 import BrowseCategories from "../../components/BrowseCategories/BrowseCategories";
 import SearchBar from "../../components/searchbar/searchbar";
 
-
 import { collection, getDocs, query, orderBy } from "firebase/firestore";
 
 function Home() {
@@ -23,7 +22,7 @@ function Home() {
         const eventsArray = querySnapshot.docs.map((doc) => {
           const data = doc.data();
           return {
-            key: doc.id,
+            id: doc.id,
             linkToTicket: data.linkToTicket,
             description: data.description,
             image: data.imageSrc,
@@ -77,7 +76,6 @@ function Home() {
           { category: "Campus Life", events },
         ]}
       />
-
     </div>
   );
 }

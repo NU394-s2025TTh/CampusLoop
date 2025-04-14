@@ -1,49 +1,44 @@
 .browse-categories {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  .category-section {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .category-title {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #dad0ea;
-    margin-bottom: 0.15rem;
-    padding-left: 0.1rem;
-  }
-  
-  .category-scroll {
-    display: flex;
-    flex-direction: row;
-    gap: 0.3rem;
-    overflow-x: auto;
-    padding-bottom: 0.1rem;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch; /* for smooth mobile scrolling */
-    scrollbar-width: none; /* Firefox */
-    
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 
-  .category-scroll {
-    min-height: 210px; /* or whatever your card height is */
-    min-width: 390px;
-  }
-  
- 
+.category-section {
+  display: flex;
+  flex-direction: column;
+}
 
-  .allow-vertical-scroll {
-    overscroll-behavior-x: contain;
-    overscroll-behavior-y: auto;
-  }
-  
-  .event-card {
-    scroll-snap-align: start;
-    flex: 0 0 auto;
-    
-  }
-  
+.category-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #dad0ea;
+  margin-bottom: 0.15rem;
+  padding-left: 0.1rem;
+}
+
+.category-scroll {
+  display: flex;
+  flex-direction: row;
+  gap: 0.3rem;
+  overflow-x: auto;
+  padding-bottom: 0.1rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* for smooth mobile scrolling */
+  scrollbar-width: none; /* Firefox */
+}
+
+.category-scroll {
+  min-height: 210px; /* or whatever your card height is */
+  min-width: 390px;
+}
+
+.allow-vertical-scroll {
+  overscroll-behavior-x: contain;
+  overscroll-behavior-y: auto;
+}
+
+.event-card {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+}
