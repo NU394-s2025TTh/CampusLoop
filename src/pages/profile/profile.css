@@ -1,6 +1,7 @@
 .profile-info {
   display: flex;
   margin-top: 20px;
+
   gap: 20px;
   background-color: #e4e0ee;
   padding: 20px;

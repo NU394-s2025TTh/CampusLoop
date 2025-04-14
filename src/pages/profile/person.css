@@ -1,0 +1,52 @@
+.person-card {
+  margin-top: 50px;
+
+  padding: 20px;
+  background-color: #e4e0ee;
+
+  border-radius: 10px;
+  max-width: 500px;
+}
+
+.person-info {
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.person-info img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.person-details h2,
+.person-details p,
+.person-details input {
+  margin: 6px 0;
+  font-size: 16px;
+  color: #401f68;
+}
+
+.person-details input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 95%;
+}
+
+button {
+  margin-top: 20px;
+  background-color: #762d9c;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #9435bd;
+  color: white;
+}
