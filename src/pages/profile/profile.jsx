@@ -28,13 +28,13 @@ export default function Profile({ addEvent }) {
       </div>
       <div className="profile-tabs">
         <button onClick={toggleForm}>
-          Edit profile
+          Create Event
         </button>
         <button onClick={toggleForm}>
-          Create Events
+          Edit Event
         </button>
         <button onClick={toggleForm}>
-          Your Events
+          Your Profile
         </button>
         
       </div>

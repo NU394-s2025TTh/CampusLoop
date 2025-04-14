@@ -2,15 +2,16 @@
   display: flex;
   /* You can use space-evenly or even remove it entirely when each item is equal width */
   justify-content: space-evenly;
+
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   padding-left: 1.1rem;
   padding-right: 0rem;
   background-color: #e4e0ee;
-  position: fixed;
+
   border-radius: 20px;
 
-  width: 410px;
+
   bottom: 0;
 }
 
