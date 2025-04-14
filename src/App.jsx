@@ -7,6 +7,8 @@ import Profile from "./pages/profile/profile";
 import Explore from "./pages/explore/explore";
 import Saved from "./pages/saved/saved"; // or adjust the path/capitalization if needed
 import EventDetails from "./pages/eventDetails/eventDetails";
+import SearchResults from "./pages/searchresults/searchresults";
+
 
 // import './App.css';
 
@@ -34,6 +36,7 @@ function App() {
           <Route path="saved" element={<Saved />} />
           <Route path="profile" element={<Profile />} />
           <Route path="event-details" element={<EventDetails />} />
+          <Route path="searchresults" element={<SearchResults />} />
         </Route>
       </Routes>
     </Router>

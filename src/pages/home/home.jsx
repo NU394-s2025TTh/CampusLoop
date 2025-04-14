@@ -6,6 +6,7 @@ import { NavBar } from "../../components/NavBar/NavBar";
 import "./home.css";
 import { db } from "../../firebase";
 import BrowseCategories from "../../components/BrowseCategories/BrowseCategories";
+import SearchBar from "../../components/searchbar/searchbar";
 
 
 import { collection, getDocs, query, orderBy } from "firebase/firestore";
@@ -47,11 +48,7 @@ function Home() {
         <Header name="Desmond" />
       </div>
       <div className="search-section">
-        <input
-          type="text"
-          className="search-input"
-          placeholder="Search for an event..."
-        />
+        <SearchBar />
         <div className="filter-bar">
           <button className="filter-chip">Date</button>
           <button className="filter-chip">Category</button>
