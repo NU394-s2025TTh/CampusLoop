@@ -1,6 +1,7 @@
 import "./profile.css";
+// eslint-disable-next-line no-unused-vars
 import Form from "./form";
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function Profile({ addEvent }) {
   const [showForm, setShowForm] = useState(false);
@@ -17,7 +18,7 @@ export default function Profile({ addEvent }) {
   }
 
   return (
-    <div className="profile-page">
+    <div >
       <div className="profile-info">
         <img src={Profile.imgSrc} alt="Profile Image" />
         <div className="text-info">
@@ -25,9 +26,18 @@ export default function Profile({ addEvent }) {
           <p>{Profile.organization}</p>
         </div>
       </div>
-      <button onClick={toggleForm}>
-        {showForm ? "Hide Form" : "Create Event"}
-      </button>
+      <div className="profile-tabs">
+        <button onClick={toggleForm}>
+          Edit profile
+        </button>
+        <button onClick={toggleForm}>
+          Create Events
+        </button>
+        <button onClick={toggleForm}>
+          Your Events
+        </button>
+        
+      </div>
       {showForm && <Form addEvent={addEvent} />}
     </div>
   );

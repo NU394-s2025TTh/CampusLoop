@@ -1,16 +1,11 @@
-import React from "react";
 import "./form.css";
-import { db, storage } from "../../firebase"; // Make sure these are correctly exported from your firebase.js
+import { db } from "../../firebase"; 
 import { collection, addDoc } from "firebase/firestore";
-import {
-  ref as storageRef,
-  uploadBytes,
-  getDownloadURL,
-} from "firebase/storage";
 
 export default function Form() {
   async function handleSubmit(event) {
     event.preventDefault();
+    // eslint-disable-next-line no-undef
     const formData = new FormData(event.target);
 
     // Extract form values
@@ -21,9 +16,6 @@ export default function Form() {
     const date = formData.get("date");
     const time = formData.get("time");
     const location = formData.get("location");
-
-    // Create a unique identifier for storage; consider using a library like uuid in production
-    const eventId = eventName + Date.now();
 
     // Build the new event object with the download URL and form data
     const newEvent = {
@@ -46,6 +38,8 @@ export default function Form() {
     } catch (error) {
       console.error("Error adding event:", error);
     }
+
+    console.alert("Your Event Created Succesfully!")
   }
 
   return (

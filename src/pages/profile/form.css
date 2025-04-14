@@ -19,3 +19,18 @@ textarea {
   border: 1px solid #ccc; /* Subtle border */
   width: 95%; /* Ensures no overflow */
 }
+
+button {
+  align-self: center; /* Keeps button centered horizontally */
+  margin-top: 20px; /* Adds space above the button */
+  margin-left: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #472264;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
