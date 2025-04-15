@@ -50,12 +50,12 @@ export default function Profile({ addEvent }) {
         >
           Create Event
         </button>
-        <button
+        {/* <button
           className={activeTab === "your-events" ? "active-tab" : ""}
           onClick={() => handleTabClick("your-events")}
         >
           Your Events
-        </button>
+        </button> */}
         <button
           className={activeTab === "your-profile" ? "active-tab" : ""}
           onClick={() => handleTabClick("your-profile")}
