@@ -1,69 +1,71 @@
 /* Container for the entire event details page */
 .event-details-container {
-  background-color: transparent;
   max-width: 500px;
-  max-height: 800px;
-  margin: 50px auto; /* Centers the container horizontally and adds vertical spacing */
-  margin-top: 0px;
-  padding: 20px;
-  border-radius: 20px;
+  margin: 1.5rem auto; /* Centers container with vertical spacing */
+  padding: 1.5rem;
+  color: #fff;              /* White text on dark */
+  border-radius: 12px;
+  box-sizing: border-box;
 }
 
-/* Image styles: Full width with fixed height and cropping where necessary */
+/* Full-width image with moderate height */
 .event-details-image {
   width: 100%;
-  height: 300px;
+  height: 260px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
-/* Title styling: Bold and centered for visual impact */
+/* Title styling: bold and centered for visual impact */
 .event-details-title {
-  font-size: 2rem;
-  color: #333333;
-  margin: 20px 0 10px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
   text-align: center;
+  color: #fff;
 }
 
-/* Date and time: Subdued and centered */
+/* Date & time: subdued, center-aligned */
 .event-details-datetime {
-  font-size: 1rem;
-  color: #666666;
+  font-size: 0.9rem;
+  color: #b3b3b3;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 0.25rem;
 }
 
-/* Location details: Centered with a color that complements the date/time */
+/* Location details: center-aligned, slightly bolder color than datetime */
 .event-details-location {
-  font-size: 1rem;
-  color: #444444;
+  font-size: 0.9rem;
+  color: #cccccc;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
-/* Description: Legible text with appropriate line-height and justified alignment */
+/* Description: left-aligned text with comfortable line-height */
 .event-details-description {
-  font-size: 1.1rem;
-  color: #555555;
-  line-height: 1.6;
-  text-align: justify;
-  margin-bottom: 30px;
-  padding: 0 10px;
+  font-size: 0.9rem;
+  color: #cccccc;
+  line-height: 1.5;
+  text-align: left;
+  margin-bottom: 1.5rem;
+  padding: 0 0.5rem;
 }
 
-/* Ticket link: A prominent call-to-action button style */
+/* Ticket link: big 'button' style with accent color */
 .event-details-ticket-link {
   display: inline-block;
-  background-color: #401f68;
+  background-color: #e50914; /* Netflix red or your chosen brand color */
   color: #ffffff;
-  padding: 12px 24px;
+  padding: 0.75rem 1.25rem;
   text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
+  border-radius: 4px;
+  font-weight: 600;
   transition: background-color 0.3s ease;
+  text-align: center;
 }
 
-/* Hover effect for the ticket link to enhance interactivity */
+/* Hover effect for the ticket link */
 .event-details-ticket-link:hover {
-  background-color: #2c1342;
+  background-color: #b00610; /* darken the red on hover */
 }

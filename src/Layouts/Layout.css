@@ -11,14 +11,14 @@
 }
 
 .app-wrapper {
-  background-color: rgb(23, 8, 42);
+  /* background-color: rgb(23, 8, 42); */
   display: flex;
   justify-content: center;
   height: 100vh;
 }
 
 .inner-container {
-  background-color: #0f0721;
+  background-color: #31264b; 
   max-width: 450px;
   width: 100%;
   height: 100vh;
@@ -26,7 +26,8 @@
   flex-direction: column;
   position: relative;
   border: 1px solid;
-  border-radius: 20px; /* optional: add rounded corners */
+  border-radius: 15px; /* optional: add rounded corners */
+  min-height: 100vh;
 }
 
 .scrollable-content {

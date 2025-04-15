@@ -1,44 +1,51 @@
+/* Wrapper for all categories sections on the page */
 .browse-categories {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  /* Combined the gap differences: pick a middle ground, e.g. 1rem */
+  gap: 1rem;
 }
 
+/* Each category block is a column: title + horizontal scroll row */
 .category-section {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem; /* spacing between title and scroll row */
 }
 
+/* Category title (e.g., 'Sports', 'Music', etc.) */
 .category-title {
   font-size: 1.1rem;
   font-weight: bold;
+  /* Example color from your original snippet */
   color: #dad0ea;
+  /* Combine margin/padding: ensure some vertical + horizontal spacing */
   margin-bottom: 0.15rem;
-  padding-left: 0.1rem;
+  margin-left: 0.5rem;
 }
 
+/* Horizontally scrolling row of event cards */
 .category-scroll {
   display: flex;
-  flex-direction: row;
-  gap: 0.3rem;
+  gap: 0.75rem;
   overflow-x: auto;
-  padding-bottom: 0.1rem;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch; /* for smooth mobile scrolling */
-  scrollbar-width: none; /* Firefox */
-}
+  scroll-snap-type: x mandatory;   /* ensures snap alignment on scroll */
+  -webkit-overflow-scrolling: touch; /* smooth mobile scrolling */
+  scrollbar-width: none; /* hides scrollbar in Firefox */
+  padding-bottom: 0.5rem; /* space below the row */
 
-.category-scroll {
-  min-height: 210px; /* or whatever your card height is */
+  /* If you want a minimum size for the scroll container */
+  min-height: 210px; 
   min-width: 390px;
 }
 
+/* Hide scrollbar in Chrome/Safari */
+.category-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Utility class for vertical scroll if needed */
 .allow-vertical-scroll {
   overscroll-behavior-x: contain;
   overscroll-behavior-y: auto;
-}
-
-.event-card {
-  scroll-snap-align: start;
-  flex: 0 0 auto;
 }

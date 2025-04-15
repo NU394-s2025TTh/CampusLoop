@@ -21,6 +21,7 @@ function SearchBar() {
         value={input}
         onChange={(e) => setInput(e.target.value)}
         onKeyDown={handleKeyDown}
+        autoFocus
       />
     </div>
   );

@@ -13,8 +13,8 @@ export default function Profile({ addEvent }) {
 
   const Profile = {
     imgSrc:
-      "https://drive.google.com/thumbnail?id=1KXZzQ-eODWRg4cPxqJCvz0plZxno9c-C",
-    name: "Ziad Elbadry",
+      "assets/blank-user.svg",
+    name: "Person Doe",
     organization: "Buffett Institute",
   };
 

@@ -7,7 +7,7 @@ import "./Header.css";
 
 export function Header({ name }) {
   return (
-    <div className="">
+    <header className="header">
       <h1>Stay in the Loop, {name}</h1>
       {/* <div className="header-buttons">
         <button className="header-icon">
@@ -27,6 +27,6 @@ export function Header({ name }) {
             <span className="icon-label">Free events</span>
       </button>
       </div> */}
-    </div>
+      </header>
   );
 }

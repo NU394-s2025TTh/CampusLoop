@@ -8,11 +8,11 @@ function Saved() {
   const { savedEvents, removeSavedEvent } = useSavedEvents();
 
   return (
-    <div className="events-list">
+    <div className="saved-container">
       <h2 className="saved-title">Saved Events!</h2>
       <div className="saved-grid">
         {savedEvents.length === 0 ? (
-          <p>No saved events.</p>
+          <p style={{color: "white"}}>No saved events.</p>
         ) : (
           savedEvents.map((event) => (
             <EventCard

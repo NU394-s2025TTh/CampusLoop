@@ -10,6 +10,14 @@
   gap: 1rem;
 }
 
+.searchresults-container {
+  min-height: 100vh;
+  padding: 1.2rem;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+
 .search-grid {
   display: flex;
   flex-wrap: wrap;

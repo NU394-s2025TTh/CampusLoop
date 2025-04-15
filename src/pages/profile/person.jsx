@@ -4,12 +4,12 @@ import "./person.css";
 export default function Person() {
   const [editing, setEditing] = useState(false);
   const [profile, setProfile] = useState({
-    name: "Ziad Elbadry",
+    name: "Person Doe",
     organization: "Buffett Institute",
-    email: "ziad@example.com",
+    email: "person@example.com",
     phone: "123-456-7890",
     imgSrc:
-      "https://drive.google.com/thumbnail?id=1KXZzQ-eODWRg4cPxqJCvz0plZxno9c-C",
+      "assets/blank-user.svg",
   });
 
   function handleChange(e) {

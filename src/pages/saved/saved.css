@@ -12,3 +12,12 @@
   justify-content: center; /* horizontally center each row */
   gap: 1rem; /* space between cards */
 }
+
+
+
+.saved-container {
+  min-height: 100vh;
+  padding: 1.2rem;
+  color: #fff;
+  box-sizing: border-box;
+}
