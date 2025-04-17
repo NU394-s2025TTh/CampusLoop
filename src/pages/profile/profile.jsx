@@ -13,7 +13,7 @@ export default function Profile({ addEvent }) {
 
   const Profile = {
     imgSrc:
-      "assets/blank-user.svg",
+      "/blank-user.svg",
     name: "Person Doe",
     organization: "Buffett Institute",
   };
