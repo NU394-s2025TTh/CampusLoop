@@ -7,6 +7,7 @@ import Form from "./form";
 
 export default function Profile({ addEvent }) {
   const { user } = useUser();
+  const userID = user?.id;
   const displayName = user?.firstName || user?.fullName || "there";
 
   const [showForm, setShowForm] = useState(false);
@@ -56,7 +57,7 @@ export default function Profile({ addEvent }) {
         </button>
       </div>
 
-      {showForm && <Form addEvent={addEvent} />}
+      {showForm && <Form addEvent={addEvent} userID={userID}/>}
       {showPerson && <Person />}
     </div>
   );

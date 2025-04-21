@@ -1,57 +1,80 @@
 import "./form.css";
-import { db } from "../../firebase";
+import { db, storage } from "../../config/firestore";
 import { collection, addDoc } from "firebase/firestore";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage"; 
+import { useState } from "react"
 
-export default function Form() {
+export default function Form({ userID }) {
+  const [showSuccess, setShowSuccess] = useState(false);
+
   async function handleSubmit(event) {
     event.preventDefault();
-    // eslint-disable-next-line no-undef
     const formData = new FormData(event.target);
 
-    // Extract form values
     const eventName = formData.get("eventName");
     const description = formData.get("description");
     const linkToTicket = formData.get("linkToTicket");
-    const imageUrl = formData.get("image");
+    const imageFile = formData.get("image"); 
     const date = formData.get("date");
     const time = formData.get("time");
     const location = formData.get("location");
+    const category = formData.get("category");
 
-    // Build the new event object with the download URL and form data
-    const newEvent = {
-      imageSrc: imageUrl,
-      name: eventName,
-      description: description,
-      linkToTicket: linkToTicket,
-      date: date,
-      time: time,
-      location: location,
-      createdAt: new Date(), // Store the timestamp for ordering
-    };
+
+
+    const imageRef = ref(storage, `event_images/${Date.now()}_${imageFile.name}`);
 
     try {
-      // Save the event to Firestore
+      await uploadBytes(imageRef, imageFile);
+      const imageUrl = await getDownloadURL(imageRef);
+      console.log(imageUrl)
+      
+      const newEvent = {
+        EventName: eventName,
+        Description: description,
+        LinktoTickets: linkToTicket,
+        LinktoImage: imageUrl, 
+        Date: date,
+        Time: time,
+        Location: location,
+        Category: category,
+        Saved: false,
+        UserID: userID
+      };
+
       await addDoc(collection(db, "events"), newEvent);
-      console.log("Event added to Firestore");
-      // Reset the form upon success
+      setShowSuccess(true);
       event.target.reset();
+      setTimeout(() => setShowSuccess(false), 3000);
     } catch (error) {
       console.error("Error adding event:", error);
     }
-
-    console.alert("Your Event Created Succesfully!");
   }
 
+
   return (
-    <form onSubmit={handleSubmit} className="form">
-      <input type="text" name="eventName" placeholder="Event Name" required />
-      <textarea name="description" placeholder="Description" required />
-      <input type="url" name="linkToTicket" placeholder="Link to Tickets" />
-      <input type="url" name="image" placeholder="Link to Image" required />
-      <input type="date" name="date" required />
-      <input type="time" name="time" required />
-      <input type="text" name="location" placeholder="Location" required />
-      <button type="submit">Submit Event</button>
-    </form>
+    <>
+      <form onSubmit={handleSubmit} className="form">
+        <input type="text" name="eventName" placeholder="Event Name" required />
+        <textarea name="description" placeholder="Description" required />
+        <input type="url" name="linkToTicket" placeholder="Link to Tickets" />
+        <input type="file" name="image" required />
+        <input type="date" name="date" required />
+        <input type="time" name="time" required />
+        <input type="text" name="location" placeholder="Location" required />
+        <select name="category" required>
+            <option value="">Select Category</option>
+            <option value="Sports">Sports</option>
+            <option value="Music">Music</option>
+            <option value="Arts">Arts</option>
+            <option value="Campus Life">Campus Life</option>
+        </select>
+        <button type="submit">Submit Event</button>
+        
+      </form>
+      {showSuccess && (
+        <div className="success-popup">🎉 Your Event was posted successfully!</div>
+      )}
+    </>
   );
 }

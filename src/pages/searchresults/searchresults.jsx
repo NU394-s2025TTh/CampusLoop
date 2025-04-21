@@ -8,7 +8,7 @@ import {
   endAt,
   getDocs,
 } from "firebase/firestore";
-import { db } from "../../firebase";
+import { db } from "../../config/firestore";
 import { EventCard } from "../../components/EventCard/EventCard";
 import "./SearchResults.css";
 

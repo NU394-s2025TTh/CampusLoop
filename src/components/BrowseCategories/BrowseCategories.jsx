@@ -16,13 +16,13 @@ function BrowseCategories({ categorizedEvents }) {
             {categoryBlock.events.map((event) => (
               <EventCard
                 key={event.id}
-                image={event.image}
-                name={event.name}
-                date={event.date}
-                time={event.time}
-                location={event.location}
-                description={event.description}
-                linkToTicket={event.linkToTicket}
+                image={event.LinktoImage}
+                name={event.EventName}
+                date={event.Date}
+                time={event.Time}
+                location={event.Location}
+                description={event.Description}
+                linkToTicket={event.LinktoTicket}
                 onActionClick={() => addSavedEvent(event)}
                 actionIcon={<CiBookmark />} // The bookmark icon
               />
