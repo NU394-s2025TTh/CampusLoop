@@ -66,3 +66,48 @@ p {
 .text-info p {
   margin: 0; /* Remove default margins */
 }
+
+/* profile.css */
+
+.profile-container {
+  padding: 1.5rem;
+}
+
+/* 1. Top‑left badge + name */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-avatar-box {
+  width: 100px; /* same as your old <img> */
+  height: 100px;
+}
+
+/* 3. Style the name next to it */
+.profile-username {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+}
+
+/* 4. (optional) hide the static img if you’re fully relying on Clerk */
+.profile-info img {
+  display: none;
+}
+
+/* rest of your existing styles… */
+.profile-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.text-info h2,
+.text-info p {
+  margin: 0;
+}
+
+/* etc… */
