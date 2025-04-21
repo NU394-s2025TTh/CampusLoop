@@ -3,7 +3,7 @@
   max-width: 500px;
   margin: 1.5rem auto; /* Centers container with vertical spacing */
   padding: 1.5rem;
-  color: #fff;              /* White text on dark */
+  color: #fff; /* White text on dark */
   border-radius: 12px;
   box-sizing: border-box;
 }

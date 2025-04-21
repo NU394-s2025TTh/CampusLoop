@@ -1,0 +1,75 @@
+/* Login.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  /* page background: dark → lighter variant of #2d2546 */
+  background: linear-gradient(to bottom, #2d2546 0%, #433b6b 50%, #6b6388 100%);
+  text-align: center;
+  color: #ffffff;
+}
+
+.login-content {
+  color: #ffffff;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.login-welcome {
+  font-size: 6.6rem;
+  margin-bottom: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 700;
+  /* switch to pure white for max contrast */
+  color: #ffffff;
+}
+
+p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #e0e0e0; /* a light gray to soften the white */
+}
+
+.login-button {
+  margin-top: 30px;
+}
+
+.login-button button {
+  padding: 15px 40px;
+  font-size: 1.2rem;
+
+  /* button gradient using your primary + a lighter complement */
+  background: linear-gradient(45deg, #2d2546 0%, #433b6b 100%);
+  border: none;
+  color: #ffffff;
+  border-radius: 30px;
+  cursor: pointer;
+  transition:
+    background 0.4s ease,
+    transform 0.3s ease;
+}
+
+.login-button button:hover {
+  background: linear-gradient(45deg, #433b6b 0%, #6b6388 100%);
+  transform: translateY(-5px);
+}
+
+.login-button button:active {
+  transform: scale(0.98);
+}

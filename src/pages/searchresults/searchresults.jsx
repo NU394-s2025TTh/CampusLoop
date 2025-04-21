@@ -69,7 +69,7 @@ function SearchResults() {
             />
           ))
         ) : (
-          <p style={{color: "white"}}>No results found.</p>
+          <p style={{ color: "white" }}>No results found.</p>
         )}
       </div>
     </div>

@@ -12,7 +12,7 @@ function Saved() {
       <h2 className="saved-title">Saved Events!</h2>
       <div className="saved-grid">
         {savedEvents.length === 0 ? (
-          <p style={{color: "white"}}>No saved events.</p>
+          <p style={{ color: "white" }}>No saved events.</p>
         ) : (
           savedEvents.map((event) => (
             <EventCard

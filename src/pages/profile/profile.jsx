@@ -12,8 +12,7 @@ export default function Profile({ addEvent }) {
   const [activeTab, setActiveTab] = useState(null);
 
   const Profile = {
-    imgSrc:
-      "assets/blank-user.svg",
+    imgSrc: "assets/blank-user.svg",
     name: "Person Doe",
     organization: "Buffett Institute",
   };

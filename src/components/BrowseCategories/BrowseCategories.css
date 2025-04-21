@@ -29,13 +29,13 @@
   display: flex;
   gap: 0.75rem;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;   /* ensures snap alignment on scroll */
+  scroll-snap-type: x mandatory; /* ensures snap alignment on scroll */
   -webkit-overflow-scrolling: touch; /* smooth mobile scrolling */
   scrollbar-width: none; /* hides scrollbar in Firefox */
   padding-bottom: 0.5rem; /* space below the row */
 
   /* If you want a minimum size for the scroll container */
-  min-height: 210px; 
+  min-height: 210px;
   min-width: 390px;
 }
 

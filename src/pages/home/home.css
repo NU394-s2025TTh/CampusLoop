@@ -12,11 +12,10 @@
 .home-container {
   min-height: 100vh;
   padding: 1.2rem;
-  background-color: #31264b; 
+  background-color: #31264b;
   color: #fff;
   box-sizing: border-box;
 }
-
 
 /* Top navigation (icons + labels) */
 /* .top-nav {

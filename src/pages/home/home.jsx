@@ -5,8 +5,6 @@ import "./home.css";
 import BrowseCategories from "../../components/BrowseCategories/BrowseCategories";
 import { fetchEvents } from "../../context/api";
 
-
-
 function Home() {
   const [events, setEvents] = useState([]);
 
