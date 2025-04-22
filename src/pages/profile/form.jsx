@@ -1,8 +1,8 @@
 import "./form.css";
 import { db, storage } from "../../config/firestore";
 import { collection, addDoc } from "firebase/firestore";
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage"; 
-import { useState } from "react"
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { useState } from "react";
 
 export default function Form({ userID }) {
   const [showSuccess, setShowSuccess] = useState(false);
@@ -14,32 +14,33 @@ export default function Form({ userID }) {
     const eventName = formData.get("eventName");
     const description = formData.get("description");
     const linkToTicket = formData.get("linkToTicket");
-    const imageFile = formData.get("image"); 
+    const imageFile = formData.get("image");
     const date = formData.get("date");
     const time = formData.get("time");
     const location = formData.get("location");
     const category = formData.get("category");
 
-
-
-    const imageRef = ref(storage, `event_images/${Date.now()}_${imageFile.name}`);
+    const imageRef = ref(
+      storage,
+      `event_images/${Date.now()}_${imageFile.name}`,
+    );
 
     try {
       await uploadBytes(imageRef, imageFile);
       const imageUrl = await getDownloadURL(imageRef);
-      console.log(imageUrl)
-      
+      console.log(imageUrl);
+
       const newEvent = {
         EventName: eventName,
         Description: description,
         LinktoTickets: linkToTicket,
-        LinktoImage: imageUrl, 
+        LinktoImage: imageUrl,
         Date: date,
         Time: time,
         Location: location,
         Category: category,
         Saved: false,
-        UserID: userID
+        UserID: userID,
       };
 
       await addDoc(collection(db, "events"), newEvent);
@@ -50,7 +51,6 @@ export default function Form({ userID }) {
       console.error("Error adding event:", error);
     }
   }
-
 
   return (
     <>
@@ -63,17 +63,18 @@ export default function Form({ userID }) {
         <input type="time" name="time" required />
         <input type="text" name="location" placeholder="Location" required />
         <select name="category" required>
-            <option value="">Select Category</option>
-            <option value="Sports">Sports</option>
-            <option value="Music">Music</option>
-            <option value="Arts">Arts</option>
-            <option value="Campus Life">Campus Life</option>
+          <option value="">Select Category</option>
+          <option value="Sports">Sports</option>
+          <option value="Music">Music</option>
+          <option value="Arts">Arts</option>
+          <option value="Campus Life">Campus Life</option>
         </select>
         <button type="submit">Submit Event</button>
-        
       </form>
       {showSuccess && (
-        <div className="success-popup">🎉 Your Event was posted successfully!</div>
+        <div className="success-popup">
+          🎉 Your Event was posted successfully!
+        </div>
       )}
     </>
   );

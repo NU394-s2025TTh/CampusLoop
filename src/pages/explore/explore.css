@@ -53,3 +53,10 @@
   padding: 0;
   margin-bottom: 10px;
 }
+
+.search-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* horizontally center each row */
+  gap: 1rem; /* space between cards */
+}

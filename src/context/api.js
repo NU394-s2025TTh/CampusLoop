@@ -6,11 +6,9 @@ const fetchEvents = async () => {
   const querySnapshot = await getDocs(collection(db, "events"));
   querySnapshot.forEach((doc) => {
     events.push({ id: doc.id, ...doc.data() });
-    console.log(events)
+    console.log(events);
   });
   return events;
 };
 
 export { fetchEvents };
-
-
