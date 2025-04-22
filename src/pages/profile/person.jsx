@@ -8,8 +8,7 @@ export default function Person() {
     organization: "Buffett Institute",
     email: "person@example.com",
     phone: "123-456-7890",
-    imgSrc:
-      "/blank-user.svg",
+    imgSrc: "/blank-user.svg",
   });
 
   function handleChange(e) {
