@@ -1,27 +1,16 @@
-import { collection, getDocs, query, orderBy } from "firebase/firestore";
-import { db } from "../firebase";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../config/firestore";
 
-export async function fetchEvents() {
-    try {
-      const eventsRef = collection(db, "events");
-      const eventsQuery = query(eventsRef, orderBy("createdAt", "desc"));
-      const querySnapshot = await getDocs(eventsQuery);
-      const eventsArray = querySnapshot.docs.map((doc) => {
-        const data = doc.data();
-        return {
-          id: doc.id,
-          linkToTicket: data.linkToTicket,
-          description: data.description,
-          image: data.imageSrc,
-          name: data.name,
-          date: data.date,
-          time: data.time,
-          location: data.location,
-        };
-      });
-      return eventsArray
-    } catch (error) {
-      console.error("Error loading events:", error);
-    }
-  }
+const fetchEvents = async () => {
+  const events = [];
+  const querySnapshot = await getDocs(collection(db, "events"));
+  querySnapshot.forEach((doc) => {
+    events.push({ id: doc.id, ...doc.data() });
+    console.log(events)
+  });
+  return events;
+};
+
+export { fetchEvents };
+
 

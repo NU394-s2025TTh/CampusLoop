@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Router, Routes, Route } from "react-router-dom";
 import React from "react";
 import Layout from "./layouts/Layout";
 import Home from "./pages/home/home";
@@ -9,38 +9,46 @@ import Saved from "./pages/saved/saved"; // or adjust the path/capitalization if
 import EventDetails from "./pages/eventDetails/eventDetails";
 import { SavedEventsProvider } from "./context/SavedEventsContext";
 import SearchResults from "./pages/searchresults/searchresults";
+import { ClerkProvider } from "@clerk/clerk-react";
+import {
+  SignedIn,
+  SignedOut,
+  UserButton,
+  SignIn,
+  SignUp,
+} from "@clerk/clerk-react";
+import Login from "./Login";
+import "./Login.css";
 
-// import './App.css';
+// Clerk publishable key
+const PUBLISHABLE_KEY =
+  "pk_test_Zmx1ZW50LXJlaW5kZWVyLTM3LmNsZXJrLmFjY291bnRzLmRldiQ";
 
-// function App() {
-//   return (
-//     <Router>
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//       </Routes>
-//       <Routes>
-//         <Route path="/profile" element={<Profile />} />
-//       </Routes>
-//     </Router>
-//   );
-// }
+if (!PUBLISHABLE_KEY) {
+  throw new Error("Missing Publishable Key");
+}
 
 function App() {
   return (
     <SavedEventsProvider>
-      <Router>
-        <Routes>
-          {/* Shared layout wrapper */}
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="explore" element={<Explore />} />
-            <Route path="saved" element={<Saved />} />
-            <Route path="profile" element={<Profile />} />
-            <Route path="event-details" element={<EventDetails />} />
-            <Route path="searchresults" element={<SearchResults />} />
-          </Route>
-        </Routes>
-      </Router>
+      <BrowserRouter>
+        {/* Shared layout wrapper */}
+        <SignedOut>
+          <Login />
+        </SignedOut>
+        <SignedIn>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="explore" element={<Explore />} />
+              <Route path="saved" element={<Saved />} />
+              <Route path="profile" element={<Profile />} />
+              <Route path="event-details" element={<EventDetails />} />
+              <Route path="searchresults" element={<SearchResults />} />
+            </Route>
+          </Routes>
+        </SignedIn>
+      </BrowserRouter>
     </SavedEventsProvider>
   );
 }

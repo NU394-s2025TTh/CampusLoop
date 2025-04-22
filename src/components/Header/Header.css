@@ -10,12 +10,6 @@
 } */
 
 /* Header section with greeting text */
-.header {
-  text-align: center;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
-  color: #e1dee5;
-}
 
 .header h1 {
   font-size: 1.5rem;
@@ -40,4 +34,22 @@
 
 .header-icon:hover {
   color: #2e1745;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #2d2546;
+  color: white;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.header-user {
+  --user-button-avatar-size: 35px;
 }

@@ -1,5 +1,5 @@
 .form {
-  background-color: #e4e0ee;
+  background-color: white;
   margin-top: 40px;
   padding: 10px; /* Slightly reduced padding */
   border-radius: 8px; /* Rounded corners */
@@ -32,4 +32,32 @@ button {
   border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+.success-popup {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 16px;
+  margin-top: 15px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+  animation: fadeInOut 3s forwards;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+select {
+  font-family: Arial, sans-serif;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 95%;
+  background-color: white;
+  color: #333;
 }

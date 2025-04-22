@@ -30,8 +30,6 @@ function Explore() {
 
       <h2 className="explore-title">Explore!</h2>
       <SearchBar />
-      
-      
 
       {/* Category Rows (using BrowseCategories) */}
       <BrowseCategories
