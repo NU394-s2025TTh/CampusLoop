@@ -57,7 +57,7 @@ export default function Profile({ addEvent }) {
         </button>
       </div>
 
-      {showForm && <Form addEvent={addEvent} userID={userID}/>}
+      {showForm && <Form addEvent={addEvent} userID={userID} />}
       {showPerson && <Person />}
     </div>
   );

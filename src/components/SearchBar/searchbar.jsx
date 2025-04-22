@@ -1,14 +1,15 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+//import { useNavigate } from "react-router-dom";
 import "./searchbar.css";
 
-function SearchBar() {
+function SearchBar({ onSearch }) {
   const [input, setInput] = useState("");
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter" && input.trim() !== "") {
-      navigate(`/searchresults?q=${encodeURIComponent(input.trim())}`);
+      //navigate(`/searchresults?q=${encodeURIComponent(input.trim())}`);
+      onSearch(input.trim());
     }
   };
 
