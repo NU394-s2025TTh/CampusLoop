@@ -1,60 +1,53 @@
-import { useState } from "react";
-import algoliasearch from "algoliasearch";
+// src/components/SearchBar/searchbar.jsx
+import React from "react";
+import algoliasearch from "algoliasearch/lite";
+import { InstantSearch, SearchBox, Hits, Configure } from "react-instantsearch";
 import "./searchbar.css";
+import { EventCard } from "../EventCard/EventCard";
 
-function SearchBar({ onSearch }) {
-  const appID = "ZMCX8B53ID";
-  const apiKey = "a9efa54725a3aada722387ede2634154";
-  const [input, setInput] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+const searchClient = algoliasearch(
+  "ZMCX8B53ID",
+  "a9efa54725a3aada722387ede2634154"
+);
 
-  // initialize once
-  const client = algoliasearch(appID, apiKey);
-  const index = client.initIndex("events");
-
-  const handleKeyDown = async (e) => {
-    if (e.key === "Enter" && input.trim()) {
-      setLoading(true);
-      setError(null);
-      try {
-        const { hits } = await index.search(input.trim(), {
-          hitsPerPage: 20, // optional params
-          attributesToRetrieve: [
-            "EventName",
-            "Date",
-            "Time",
-            "Location",
-            "Description",
-            "LinktoImage",
-            "LinktoTicket",
-          ],
-        });
-        onSearch(hits);
-      } catch (err) {
-        console.error("Algolia search error:", err);
-        setError("Search failed, please try again.");
-      } finally {
-        setLoading(false);
-      }
-    }
-  };
-
+function Hit({ hit }) {
   return (
-    <div className="search-section">
-      <input
-        type="text"
-        className="search-input"
-        placeholder="Search for an event..."
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        onKeyDown={handleKeyDown}
-        autoFocus
-      />
-      {loading && <div className="search-loading">Searching…</div>}
-      {error && <div className="search-error">{error}</div>}
-    </div>
+    <EventCard
+      image={hit.LinktoImage}
+      name={hit.EventName}
+      date={hit.Date}
+      time={hit.Time}
+      location={hit.Location}
+      description={hit.Description}
+      linkToTicket={hit.LinktoTicket}
+      /* no save action here—pass one if you like */
+    />
   );
 }
 
-export default SearchBar;
+
+export default function SearchBar() {
+  return (
+    <InstantSearch
+      searchClient={searchClient}
+      indexName="campusloop_events"
+      // className="search-input"
+    >
+      <div className="search-section">
+        <SearchBox
+          // className="search-input"
+          placeholder="Search for an event…"
+          submitIconComponent={({ classNames }) => (
+            <div className={classNames.submitIcon}></div>
+          )}
+          autoFocus
+
+        />
+      </div>
+      <Configure hitsPerPage={20} />
+      <div className="search-hits">
+        <Hits hitComponent={Hit} />
+      </div>
+    </InstantSearch>
+  );
+}
