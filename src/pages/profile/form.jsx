@@ -74,15 +74,14 @@ export default function Form({ userID }) {
         </label>
 
         <label>
-          Link to Tickets: 
+          Link to Tickets:
           <input type="url" name="linkToTicket" />
         </label>
 
-
         <label>
           <span>
-          Upload Image: <span className="required">*</span>
-          <input type="file" name="image" accept="image/*" required />
+            Upload Image: <span className="required">*</span>
+            <input type="file" name="image" accept="image/*" required />
           </span>
         </label>
 
@@ -122,8 +121,6 @@ export default function Form({ userID }) {
 
         <button type="submit">Submit Event</button>
       </form>
-
-
     </>
   );
 }

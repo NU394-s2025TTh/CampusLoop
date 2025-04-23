@@ -73,16 +73,15 @@ p {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
 }
 
 /* 1. Top‑left badge + name */
 .profile-header {
   display: flex;
 
-  justify-content: center; 
+  justify-content: center;
   margin-bottom: 3rem;
-
 }
 
 .profile-avatar-box {
@@ -105,8 +104,14 @@ p {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* 4. (optional) hide the static img if you’re fully relying on Clerk */
@@ -124,6 +129,10 @@ p {
 .text-info h2,
 .text-info p {
   margin: 0;
+}
+
+.profile-tabs .active-tab {
+  background-color: #e0c7eb;
 }
 
 /* etc… */

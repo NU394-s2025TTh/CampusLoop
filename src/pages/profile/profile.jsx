@@ -28,11 +28,11 @@ export default function Profile({ addEvent }) {
   function handleTabClick(tabName) {
     setActiveTab(tabName);
     if (tabName === "create-event") {
+      setShowForm(true);
       setShowPerson(false);
-      setShowForm((f) => !f);
     } else if (tabName === "your-profile") {
-      setShowPerson((p) => !p);
       setShowForm(false);
+      setShowPerson(true);
     }
   }
 
@@ -42,12 +42,10 @@ export default function Profile({ addEvent }) {
       <SignedIn>
         <div className="profile-header">
           <UserButton appearance={userButtonAppearance} />
-
         </div>
         <span className="profile-username">
-            Look at your past events <br></br>
-            & post more
-          </span>
+          Look at your past events <br></br>& post more
+        </span>
       </SignedIn>
 
       {/* ★ Tabs */}
@@ -64,7 +62,6 @@ export default function Profile({ addEvent }) {
         >
           Your Events
         </button>
-
       </div>
 
       {showForm && <Form addEvent={addEvent} userID={userID} />}

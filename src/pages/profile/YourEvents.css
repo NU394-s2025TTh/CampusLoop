@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: column;
   align-items: stretch; /* This allows children like .btn to align left */
-  text-align: left;  
+  text-align: left;
 }
 
 .your-event-card img {

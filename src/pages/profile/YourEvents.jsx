@@ -62,15 +62,15 @@ export default function YourEvents({ userID }) {
     setEditingId(null);
     setEvents((prev) =>
       prev.map((event) =>
-        event.id === id ? { ...event, ...formData } : event
-      )
+        event.id === id ? { ...event, ...formData } : event,
+      ),
     );
   };
 
   return (
     <div className="your-events-list">
       {events.length === 0 ? (
-        <p></p>
+        <p>No Events</p>
       ) : (
         events.map((event) => (
           <div className="your-event-card" key={event.id}>
@@ -121,11 +121,18 @@ export default function YourEvents({ userID }) {
               <>
                 <h3>{event.EventName}</h3>
                 <p>{event.Description}</p>
-                <p>{event.Date} at {event.Time}</p>
+                <p>
+                  {event.Date} at {event.Time}
+                </p>
                 <p>Location: {event.Location}</p>
                 <div className="btn">
-                  <button className="delete" onClick={() => handleDelete(event.id)}>Delete</button>
-                  <button  onClick={() => startEdit(event)}>Edit</button>
+                  <button
+                    className="delete"
+                    onClick={() => handleDelete(event.id)}
+                  >
+                    Delete
+                  </button>
+                  <button onClick={() => startEdit(event)}>Edit</button>
                 </div>
               </>
             )}
