@@ -15,11 +15,16 @@ export default function Form({ userID }) {
     const description = formData.get("description");
     const linkToTicket = formData.get("linkToTicket");
     const imageFile = formData.get("image");
+    const imageFile = formData.get("image");
     const date = formData.get("date");
     const time = formData.get("time");
     const location = formData.get("location");
     const category = formData.get("category");
 
+    const imageRef = ref(
+      storage,
+      `event_images/${Date.now()}_${imageFile.name}`,
+    );
     const imageRef = ref(
       storage,
       `event_images/${Date.now()}_${imageFile.name}`,
@@ -30,16 +35,20 @@ export default function Form({ userID }) {
       const imageUrl = await getDownloadURL(imageRef);
       console.log(imageUrl);
 
+      console.log(imageUrl);
+
       const newEvent = {
         EventName: eventName,
         Description: description,
         LinktoTickets: linkToTicket,
+        LinktoImage: imageUrl,
         LinktoImage: imageUrl,
         Date: date,
         Time: time,
         Location: location,
         Category: category,
         Saved: false,
+        UserID: userID,
         UserID: userID,
       };
 

@@ -23,18 +23,8 @@ function Home() {
 
   return (
     <div className="home-container">
-      <Header name="Desmond" />
-      <BrowseCategories
-        categorizedEvents={[
-          { category: "Sports", events: filterEventsByCategory("Sports") },
-          { category: "Music", events: filterEventsByCategory("Music") },
-          { category: "Arts", events: filterEventsByCategory("Arts") },
-          {
-            category: "Campus Life",
-            events: filterEventsByCategory("Campus Life"),
-          },
-        ]}
-      />
+      <Header />
+      <BrowseCategories events={events} />
     </div>
   );
 }

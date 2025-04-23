@@ -8,7 +8,6 @@ import Explore from "./pages/explore/explore";
 import Saved from "./pages/saved/saved"; // or adjust the path/capitalization if needed
 import EventDetails from "./pages/eventDetails/eventDetails";
 import { SavedEventsProvider } from "./context/SavedEventsContext";
-import SearchResults from "./pages/searchresults/searchresults";
 import { ClerkProvider } from "@clerk/clerk-react";
 import {
   SignedIn,
@@ -44,7 +43,6 @@ function App() {
               <Route path="saved" element={<Saved />} />
               <Route path="profile" element={<Profile />} />
               <Route path="event-details" element={<EventDetails />} />
-              <Route path="searchresults" element={<SearchResults />} />
             </Route>
           </Routes>
         </SignedIn>

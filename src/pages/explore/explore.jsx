@@ -6,7 +6,7 @@ import { fetchEvents } from "../../context/api";
 import BrowseCategories from "../../components/BrowseCategories/BrowseCategories";
 
 function Explore() {
-  const { addSavedEvent } = useSavedEvents();
+  // const { addSavedEvent } = useSavedEvents();
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
@@ -32,14 +32,7 @@ function Explore() {
       <SearchBar />
 
       {/* Category Rows (using BrowseCategories) */}
-      <BrowseCategories
-        categorizedEvents={[
-          { category: "Sports", events },
-          { category: "Music", events },
-          { category: "Arts", events },
-          { category: "Campus Life", events },
-        ]}
-      />
+      <BrowseCategories events={events} />
     </div>
   );
 }

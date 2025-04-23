@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { EventCard } from "../../components/EventCard/EventCard";
 import "./saved.css"; // Optional if you want custom styling
-import { useSavedEvents } from "../../context/SavedEventsContext";
 import { CiBookmarkRemove } from "react-icons/ci";
+import { fetchEvents } from "../../context/api";
 
-function Saved() {
-  const { savedEvents, removeSavedEvent } = useSavedEvents();
+export default function Saved() {
+  const [savedEvents, setSavedEvents] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const all = await fetchEvents();
+      setSavedEvents(all.filter((e) => e.Saved));
+    })();
+  }, []);
+
+  const handleRemove = (id) => {
+    // If you persist removals to your backend, do it here.
+    // Then update local state:
+    setSavedEvents((prev) => prev.filter((e) => e.id !== id));
+  };
 
   return (
     <div className="saved-container">
@@ -24,7 +37,7 @@ function Saved() {
               location={event.location}
               description={event.description}
               linkToTicket={event.linkToTicket}
-              onActionClick={() => removeSavedEvent(event.id)}
+              onActionClick={() => handleRemove(event.id)}
               actionIcon={<CiBookmarkRemove />}
             />
           ))
@@ -33,5 +46,3 @@ function Saved() {
     </div>
   );
 }
-
-export default Saved;
