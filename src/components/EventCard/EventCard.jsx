@@ -37,11 +37,10 @@ export function EventCard({
     "07": "JUL",
     "08": "AUG",
     "09": "SEP",
-    "10": "OCT",
-    "11": "NOV",
-    "12": "DEC"
+    10: "OCT",
+    11: "NOV",
+    12: "DEC",
   };
-  
 
   return (
     <div className="event-card" onClick={handleCardClick}>
@@ -51,10 +50,16 @@ export function EventCard({
         {/* Date in top-left */}
         <div className="event-date-overlay">
           <div className="event-date-text">
-            <div style={{ fontSize: "1.1rem", lineHeight: 1 }}> 
+            <div style={{ fontSize: "1.1rem", lineHeight: 1 }}>
               {date.substring(8, 10)}
             </div>
-            <div style={{ fontSize: "0.75rem", textTransform: "uppercase", lineHeight: 1 }}>
+            <div
+              style={{
+                fontSize: "0.75rem",
+                textTransform: "uppercase",
+                lineHeight: 1,
+              }}
+            >
               {monthDict[date.substring(5, 7)]}
             </div>
           </div>
@@ -62,7 +67,10 @@ export function EventCard({
 
         {/* Bookmark in top-right */}
         {onActionClick && (
-          <button className="bookmark-button-overlay" onClick={handleBookmarkClick}>
+          <button
+            className="bookmark-button-overlay"
+            onClick={handleBookmarkClick}
+          >
             {actionIcon}
           </button>
         )}
@@ -70,9 +78,7 @@ export function EventCard({
 
       <div className="event-card-content">
         <h1 className="event-name">{name}</h1>
-
       </div>
     </div>
-
   );
 }
