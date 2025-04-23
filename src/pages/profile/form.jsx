@@ -15,7 +15,6 @@ export default function Form({ userID }) {
     const description = formData.get("description");
     const linkToTicket = formData.get("linkToTicket");
     const imageFile = formData.get("image");
-    const imageFile = formData.get("image");
     const date = formData.get("date");
     const time = formData.get("time");
     const location = formData.get("location");
@@ -25,23 +24,15 @@ export default function Form({ userID }) {
       storage,
       `event_images/${Date.now()}_${imageFile.name}`,
     );
-    const imageRef = ref(
-      storage,
-      `event_images/${Date.now()}_${imageFile.name}`,
-    );
 
     try {
       await uploadBytes(imageRef, imageFile);
       const imageUrl = await getDownloadURL(imageRef);
       console.log(imageUrl);
-
-      console.log(imageUrl);
-
       const newEvent = {
         EventName: eventName,
         Description: description,
         LinktoTickets: linkToTicket,
-        LinktoImage: imageUrl,
         LinktoImage: imageUrl,
         Date: date,
         Time: time,
@@ -49,7 +40,7 @@ export default function Form({ userID }) {
         Category: category,
         Saved: false,
         UserID: userID,
-        UserID: userID,
+
       };
 
       await addDoc(collection(db, "events"), newEvent);
@@ -120,9 +111,10 @@ export default function Form({ userID }) {
             Category: <span className="required">*</span>
             <select name="category" required>
               <option value="">Select Category</option>
-              <option value="Sports">Sports</option>
+              <option value="Athletics">Athletics</option>
               <option value="Music">Music</option>
-              <option value="Arts">Arts</option>
+              <option value="Theater">Theater</option>
+              <option value="Guest Speakers">Guest Speakers</option>
               <option value="Campus Life">Campus Life</option>
             </select>
           </span>
