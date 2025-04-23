@@ -12,36 +12,29 @@ body {
   overflow: hidden;
 }
 
-
 .login-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;           
-  padding: 1rem;         
+  height: 100%;
+  padding: 1rem;
   box-sizing: border-box;
-  background: linear-gradient(
-    to bottom,
-    #2d2546 0%,
-    #433b6b 50%,
-    #6b6388 100%
-  );
+  background: linear-gradient(to bottom, #2d2546 0%, #433b6b 50%, #6b6388 100%);
   text-align: center;
   color: #ffffff;
 }
 
-
 .login-content {
   width: 100%;
-  max-width: 350px;      
-  margin: 0 auto;        
+  max-width: 350px;
+  margin: 0 auto;
   padding: 20px;
 }
 
 .login-welcome {
   font-size: clamp(2rem, 6vw, 3rem);
   margin-bottom: 1rem;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-weight: 700;
   color: #ffffff;
 }
@@ -62,14 +55,16 @@ body {
   color: white;
   border: none;
   cursor: pointer;
-  transition: transform 0.2s ease, background 0.3s ease;
+  transition:
+    transform 0.2s ease,
+    background 0.3s ease;
 }
 
 .login-button button:hover {
   background: linear-gradient(45deg, #433b6b, #6b6388);
   transform: translateY(-3px);
 }
-      
+
 .skip-button {
   margin-top: 1rem;
   background: transparent;
@@ -80,5 +75,5 @@ body {
   cursor: pointer;
 }
 .skip-button:hover {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
 }

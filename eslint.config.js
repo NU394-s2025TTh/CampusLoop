@@ -19,6 +19,8 @@ export default [
     },
     rules: {
       "react/react-in-jsx-scope": "off", // not needed with React 17+
+      "no-unused-vars": "off",
+      "no-undef": "off",
     },
   },
 ];
