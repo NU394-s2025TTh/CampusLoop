@@ -71,7 +71,7 @@ export default function Form({ userID }) {
             </option>
           ))}
         </select>
-        <button type="submit">Submit Event</button>
+        <button className="form-button" type="submit">Submit Event</button>
       </form>
       {showSuccess && (
         <div className="success-popup">

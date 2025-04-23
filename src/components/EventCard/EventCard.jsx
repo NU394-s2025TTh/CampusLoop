@@ -27,24 +27,52 @@ export function EventCard({
     }
   };
 
+  const monthDict = {
+    "01": "JAN",
+    "02": "FEB",
+    "03": "MAR",
+    "04": "APR",
+    "05": "MAY",
+    "06": "JUN",
+    "07": "JUL",
+    "08": "AUG",
+    "09": "SEP",
+    "10": "OCT",
+    "11": "NOV",
+    "12": "DEC"
+  };
+  
+
   return (
     <div className="event-card" onClick={handleCardClick}>
-      <img src={image} alt={name} className="event-card-image" />
+      <div className="event-card-image-wrapper">
+        <img src={image} alt={name} className="event-card-image" />
+
+        {/* Date in top-left */}
+        <div className="event-date-overlay">
+          <div className="event-date-text">
+            <div style={{ fontSize: "1.1rem", lineHeight: 1 }}> 
+              {date.substring(8, 10)}
+            </div>
+            <div style={{ fontSize: "0.75rem", textTransform: "uppercase", lineHeight: 1 }}>
+              {monthDict[date.substring(5, 7)]}
+            </div>
+          </div>
+        </div>
+
+        {/* Bookmark in top-right */}
+        {onActionClick && (
+          <button className="bookmark-button-overlay" onClick={handleBookmarkClick}>
+            {actionIcon}
+          </button>
+        )}
+      </div>
 
       <div className="event-card-content">
-        {/* Show the name on a full line */}
         <h1 className="event-name">{name}</h1>
 
-        {/* Footer row for date on left, bookmark icon on right */}
-        <div className="event-card-footer">
-          <p className="event-date">{date}</p>
-          {onActionClick && (
-            <button className="bookmark-button" onClick={handleBookmarkClick}>
-              {actionIcon}
-            </button>
-          )}
-        </div>
       </div>
     </div>
+
   );
 }

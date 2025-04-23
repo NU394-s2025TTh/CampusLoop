@@ -20,7 +20,7 @@ textarea {
   width: 95%; /* Ensures no overflow */
 }
 
-button {
+.form-button {
   align-self: center; /* Keeps button centered horizontally */
   margin-top: 20px; /* Adds space above the button */
   margin-left: 20px;
