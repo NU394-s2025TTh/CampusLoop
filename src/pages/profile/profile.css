@@ -71,14 +71,18 @@ p {
 
 .profile-container {
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
 }
 
 /* 1. Top‑left badge + name */
 .profile-header {
   display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1.5rem;
+
+  justify-content: center; 
+  margin-bottom: 3rem;
+
 }
 
 .profile-avatar-box {
@@ -88,9 +92,21 @@ p {
 
 /* 3. Style the name next to it */
 .profile-username {
-  font-size: 1.25rem;
+  display: block;
+  font-size: 1.5rem;
   font-weight: 600;
-  color: white;
+  color: #4e00ff; /* vibrant purple */
+  margin-bottom: 20px;
+  text-align: center;
+  background: linear-gradient(to right, #e9e6eb, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* 4. (optional) hide the static img if you’re fully relying on Clerk */

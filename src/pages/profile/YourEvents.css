@@ -1,0 +1,81 @@
+.your-events-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.your-event-card {
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* This allows children like .btn to align left */
+  text-align: left;  
+}
+
+.your-event-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.your-event-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.3rem;
+  color: #472264;
+}
+
+.your-event-card p {
+  margin-bottom: 1rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.your-event-card button {
+  display: flex;
+  padding: 8px 16px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  background-color: #472264;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.your-event-card button:hover {
+  background-color: #6a338a;
+}
+
+.your-event-card input,
+.your-event-card textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.btn {
+  display: flex;
+  justify-content: flex-start; /* Aligns buttons to the left */
+  margin-top: 10px;
+}
+
+.your-event-card .delete {
+  background-color: #e53935 !important;
+}
+
+.your-event-card .delete:hover {
+  background-color: #c62828 !important;
+}

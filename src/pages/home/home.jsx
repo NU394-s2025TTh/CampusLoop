@@ -6,7 +6,6 @@ import BrowseCategories from "../../components/BrowseCategories/BrowseCategories
 import { fetchEvents } from "../../context/api";
 
 function Home() {
-
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
@@ -14,7 +13,6 @@ function Home() {
       const eventsArray = await fetchEvents();
       if (eventsArray) {
         setEvents(eventsArray);
-
       }
     })();
   }, []);
@@ -22,7 +20,6 @@ function Home() {
   function filterEventsByCategory(category) {
     return events.filter((event) => event.Category === category);
   }
-
 
   return (
     <div className="home-container">
@@ -32,7 +29,10 @@ function Home() {
           { category: "Sports", events: filterEventsByCategory("Sports") },
           { category: "Music", events: filterEventsByCategory("Music") },
           { category: "Arts", events: filterEventsByCategory("Arts") },
-          { category: "Campus Life", events: filterEventsByCategory("Campus Life") },
+          {
+            category: "Campus Life",
+            events: filterEventsByCategory("Campus Life"),
+          },
         ]}
       />
     </div>

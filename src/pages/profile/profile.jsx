@@ -3,6 +3,7 @@ import "./profile.css";
 import { useState } from "react";
 import { SignedIn, UserButton, useUser } from "@clerk/clerk-react";
 
+import YourEvents from "./YourEvents";
 import Form from "./form";
 
 export default function Profile({ addEvent }) {
@@ -41,10 +42,12 @@ export default function Profile({ addEvent }) {
       <SignedIn>
         <div className="profile-header">
           <UserButton appearance={userButtonAppearance} />
-          <span className="profile-username">
-            Look at your past events & create more
-          </span>
+
         </div>
+        <span className="profile-username">
+            Look at your past events <br></br>
+            & post more
+          </span>
       </SignedIn>
 
       {/* ★ Tabs */}
@@ -53,12 +56,19 @@ export default function Profile({ addEvent }) {
           className={activeTab === "create-event" ? "active-tab" : ""}
           onClick={() => handleTabClick("create-event")}
         >
-          Create Event
+          Post Event
         </button>
+        <button
+          className={activeTab === "your-profile" ? "active-tab" : ""}
+          onClick={() => handleTabClick("your-profile")}
+        >
+          Your Events
+        </button>
+
       </div>
 
-      {showForm && <Form addEvent={addEvent} userID={userID}/>}
-      {showPerson && <Person />}
+      {showForm && <Form addEvent={addEvent} userID={userID} />}
+      {showPerson && <YourEvents userID={userID} />}
     </div>
   );
 }
