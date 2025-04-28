@@ -72,6 +72,10 @@
   margin-top: 10px;
 }
 
+.your-events-list p {
+  color: white;
+}
+
 .your-event-card .delete {
   background-color: #e53935 !important;
 }
@@ -79,3 +83,7 @@
 .your-event-card .delete:hover {
   background-color: #c62828 !important;
 }
+
+
+
+

@@ -10,6 +10,8 @@
   flex-direction: column;
   gap: 15px;
   align-items: stretch; /* this keeps children full width inside */
+  min-height: 80vh; /* always taller than viewport */
+  overflow-y: hidden;
 }
 
 label {
@@ -85,3 +87,7 @@ button {
   color: red;
   margin-left: 4px;
 }
+
+
+
+

@@ -40,7 +40,6 @@ export default function Form({ userID }) {
         Category: category,
         Saved: false,
         UserID: userID,
-
       };
 
       await addDoc(collection(db, "events"), newEvent);

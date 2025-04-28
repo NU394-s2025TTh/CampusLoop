@@ -1,6 +1,6 @@
 // Profile.jsx
 import "./profile.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { SignedIn, UserButton, useUser } from "@clerk/clerk-react";
 
 import YourEvents from "./YourEvents";
@@ -14,6 +14,7 @@ export default function Profile({ addEvent }) {
   const [showForm, setShowForm] = useState(false);
   const [showPerson, setShowPerson] = useState(false);
   const [activeTab, setActiveTab] = useState(null);
+  const [showState, setShowState ] = useState(0);
 
   const userButtonAppearance = {
     elements: {
@@ -25,16 +26,24 @@ export default function Profile({ addEvent }) {
     },
   };
 
+  useEffect(() => {
+    // Show events by default on first load
+    setShowPerson(true);
+  }, []);
+
   function handleTabClick(tabName) {
-    setActiveTab(tabName);
-    if (tabName === "create-event") {
-      setShowForm(true);
-      setShowPerson(false);
-    } else if (tabName === "your-profile") {
-      setShowForm(false);
-      setShowPerson(true);
+    if (showState === 0) {
+        setActiveTab(tabName);
+        setShowForm(true);
+        setShowPerson(false);
+        setShowState(1);
+      } else if (showState === 1) {
+        setActiveTab(null);
+        setShowForm(false);
+        setShowPerson(true);
+        setShowState(0);
+      }
     }
-  }
 
   return (
     <div className="profile-container">
@@ -56,12 +65,7 @@ export default function Profile({ addEvent }) {
         >
           Post Event
         </button>
-        <button
-          className={activeTab === "your-profile" ? "active-tab" : ""}
-          onClick={() => handleTabClick("your-profile")}
-        >
-          Your Events
-        </button>
+
       </div>
 
       {showForm && <Form addEvent={addEvent} userID={userID} />}

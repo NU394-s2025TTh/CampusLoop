@@ -2,7 +2,7 @@
 import React from "react";
 import { SignInButton } from "@clerk/clerk-react";
 import "./Login.css";
-import "./Layouts/Layout.css";   // bring in your app‑wrapper, inner‑container, etc.
+import "./Layouts/Layout.css"; // bring in your app‑wrapper, inner‑container, etc.
 
 function Login() {
   return (
@@ -12,9 +12,7 @@ function Login() {
           <div className="login-wrapper">
             <div className="login-content">
               <h1 className="login-welcome">Welcome to CampusLoop</h1>
-              <p>
-                Discover, share &amp; save every campus event
-              </p>
+              <p>Discover, share &amp; save every campus event</p>
               <div className="login-button">
                 <SignInButton>
                   <button>Sign In</button>
