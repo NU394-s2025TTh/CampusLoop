@@ -3,6 +3,7 @@ import { db, storage } from "../../config/firestore";
 import { collection, addDoc } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { useState } from "react";
+import categories from "../../components/BrowseCategories/categories.json";
 
 export default function Form({ userID }) {
   const [showSuccess, setShowSuccess] = useState(false);
@@ -110,11 +111,11 @@ export default function Form({ userID }) {
             Category: <span className="required">*</span>
             <select name="category" required>
               <option value="">Select Category</option>
-              <option value="Athletics">Athletics</option>
-              <option value="Music">Music</option>
-              <option value="Theater">Theater</option>
-              <option value="Guest Speakers">Guest Speakers</option>
-              <option value="Campus Life">Campus Life</option>
+              {categories.map((cat) => (
+                <option key={cat} value={cat}>
+                  {cat}
+                </option>
+              ))}
             </select>
           </span>
         </label>
