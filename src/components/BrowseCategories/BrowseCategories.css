@@ -17,9 +17,7 @@
 .category-title {
   font-size: 1.1rem;
   font-weight: bold;
-  /* Example color from your original snippet */
   color: #dad0ea;
-  /* Combine margin/padding: ensure some vertical + horizontal spacing */
   margin-bottom: 0.15rem;
   margin-left: 0.5rem;
 }

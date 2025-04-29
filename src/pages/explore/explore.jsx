@@ -6,6 +6,7 @@ import { fetchEvents } from "../../context/api";
 import BrowseCategories from "../../components/BrowseCategories/BrowseCategories";
 import { useNavigate } from "react-router-dom";
 
+
 function Explore() {
   // const { addSavedEvent } = useSavedEvents();
   const navigate = useNavigate();
@@ -38,19 +39,18 @@ function Explore() {
 
   return (
     <div className="explore-container">
-      {/* Hero Banner (optional) */}
+      {/* Hero Banner */}
       <div className="explore-hero" onClick={handleFeaturedClick}>
         <div className="explore-hero-content">
           <h2 className="explore-hero-title">Featured Event</h2>
-          {/* <p>Don’t miss out on our biggest event this week!</p> */}
         </div>
       </div>
 
-      {/* <h2 className="explore-title">Explore!</h2> */}
-      <SearchBar />
+      <h2 className="explore-title">Explore!</h2>
 
-      {/* Category Rows (using BrowseCategories) */}
-      <BrowseCategories events={events} />
+      <SearchBar events={events} />
+      {/*<BrowseCategories events={events} />*/}
+
     </div>
   );
 }

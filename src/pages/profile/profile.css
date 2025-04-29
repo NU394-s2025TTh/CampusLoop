@@ -1,73 +1,9 @@
-.profile-info {
-  display: flex;
-  margin-top: 20px;
 
-  gap: 20px;
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
 }
-
-.profile-tabs {
-  display: flex;
-  overflow-x: auto;
-  white-space: nowrap;
-  gap: 10px;
-  padding: 10px 0;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
-}
-
-.profile-tabs::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
-}
-
-.profile-tabs button {
-  align-self: center; /* Keeps button centered horizontally */
-  margin-top: 20px; /* Adds space above the button */
-  font-weight: bold;
-  margin-left: 10px;
-  padding: 10px 20px;
-  font-size: 16px;
-  color: #401f68;
-  background-color: white;
-  border: solid;
-  border-color: #9435bd;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.profile-page button:hover {
-  background-color: #9435bd;
-}
-
-.profile-info img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: solid;
-  border-color: #9435bd;
-}
-
-.text-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-p {
-  color: #472264;
-}
-
-.text-info h2,
-.text-info p {
-  margin: 0; /* Remove default margins */
-}
-
-/* profile.css */
 
 .profile-container {
   padding: 1.5rem;
@@ -76,33 +12,34 @@ p {
   align-items: center;
 }
 
-/* 1. Top‑left badge + name */
+/* Header: User badge */
 .profile-header {
   display: flex;
-
   justify-content: center;
   margin-bottom: 3rem;
 }
 
+/* User avatar box */
 .profile-avatar-box {
-  width: 100px; /* same as your old <img> */
+  width: 100px;
   height: 100px;
 }
 
-/* 3. Style the name next to it */
+/* Username styling */
 .profile-username {
   display: block;
   font-size: 1.5rem;
   font-weight: 600;
-  color: #4e00ff; /* vibrant purple */
   margin-bottom: 20px;
   text-align: center;
   background: linear-gradient(to right, #e9e6eb, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: #4e00ff; /* fallback */
   animation: fadeIn 1s ease-in-out;
 }
 
+/* Fade-in animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -114,25 +51,71 @@ p {
   }
 }
 
-/* 4. (optional) hide the static img if you’re fully relying on Clerk */
-.profile-info img {
-  display: none;
-}
-
-/* rest of your existing styles… */
+/* Profile Info card */
 .profile-info {
+  margin-top: 20px;
+  gap: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
 }
 
+/* Profile image inside info card */
+.profile-info img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: solid;
+  border-color: #9435bd;
+  display: none; /* If using Clerk avatar */
+}
+
+/* Text info inside profile info */
+.text-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .text-info h2,
 .text-info p {
   margin: 0;
+  color: #472264;
 }
 
+/* Tabs container */
+.profile-tabs {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* Tab button styling */
+.profile-tabs button {
+  font-weight: bold;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #401f68;
+  background-color: white;
+  border: solid 2px #9435bd;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Active tab */
 .profile-tabs .active-tab {
   background-color: #e0c7eb;
 }
 
-/* etc… */
+
