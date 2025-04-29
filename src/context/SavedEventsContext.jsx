@@ -1,6 +1,12 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import { useUser } from "@clerk/clerk-react";
-import { collection, doc, setDoc, deleteDoc, onSnapshot } from "firebase/firestore";
+import {
+  collection,
+  doc,
+  setDoc,
+  deleteDoc,
+  onSnapshot,
+} from "firebase/firestore";
 import { db } from "../config/firestore";
 
 const SavedEventsContext = createContext();
@@ -12,11 +18,14 @@ export function SavedEventsProvider({ children }) {
 
   // Real-time listener for the user's savedEvents subcollection
   useEffect(() => {
-    console.log("✔ current user ID:", uid);
+    // console.log("✔ current user ID:", uid);
     if (!uid) return;
     const colRef = collection(db, "users", uid, "savedEvents");
     const unsubscribe = onSnapshot(colRef, (snapshot) => {
-      const events = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+      const events = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
       setSavedEvents(events);
     });
     return unsubscribe;

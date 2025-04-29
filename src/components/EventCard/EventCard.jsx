@@ -30,14 +30,32 @@ export function EventCard({
     if (isSaved) {
       removeSavedEvent(id);
     } else {
-      addSavedEvent({ id, image, name, date, time, location, description, linkToTicket });
+      addSavedEvent({
+        id,
+        image,
+        name,
+        date,
+        time,
+        location,
+        description,
+        linkToTicket,
+      });
     }
   };
 
   const monthDict = {
-    "01": "JAN", "02": "FEB", "03": "MAR", "04": "APR",
-    "05": "MAY", "06": "JUN", "07": "JUL", "08": "AUG",
-    "09": "SEP", "10": "OCT", "11": "NOV", "12": "DEC",
+    "01": "JAN",
+    "02": "FEB",
+    "03": "MAR",
+    "04": "APR",
+    "05": "MAY",
+    "06": "JUN",
+    "07": "JUL",
+    "08": "AUG",
+    "09": "SEP",
+    10: "OCT",
+    11: "NOV",
+    12: "DEC",
   };
 
   return (
@@ -50,13 +68,22 @@ export function EventCard({
             <div style={{ fontSize: "1.1rem", lineHeight: 1 }}>
               {date.substring(8, 10)}
             </div>
-            <div style={{ fontSize: "0.75rem", textTransform: "uppercase", lineHeight: 1 }}>
+            <div
+              style={{
+                fontSize: "0.75rem",
+                textTransform: "uppercase",
+                lineHeight: 1,
+              }}
+            >
               {monthDict[date.substring(5, 7)]}
             </div>
           </div>
         </div>
 
-        <button className="bookmark-button-overlay" onClick={handleBookmarkClick}>
+        <button
+          className="bookmark-button-overlay"
+          onClick={handleBookmarkClick}
+        >
           {isSaved ? <CiBookmarkRemove /> : <CiBookmark />}
         </button>
       </div>
