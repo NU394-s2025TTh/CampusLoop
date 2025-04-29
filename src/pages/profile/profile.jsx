@@ -14,7 +14,7 @@ export default function Profile({ addEvent }) {
   const [showForm, setShowForm] = useState(false);
   const [showPerson, setShowPerson] = useState(false);
   const [activeTab, setActiveTab] = useState(null);
-  const [showState, setShowState ] = useState(0);
+  const [showState, setShowState] = useState(0);
 
   const userButtonAppearance = {
     elements: {
@@ -33,17 +33,17 @@ export default function Profile({ addEvent }) {
 
   function handleTabClick(tabName) {
     if (showState === 0) {
-        setActiveTab(tabName);
-        setShowForm(true);
-        setShowPerson(false);
-        setShowState(1);
-      } else if (showState === 1) {
-        setActiveTab(null);
-        setShowForm(false);
-        setShowPerson(true);
-        setShowState(0);
-      }
+      setActiveTab(tabName);
+      setShowForm(true);
+      setShowPerson(false);
+      setShowState(1);
+    } else if (showState === 1) {
+      setActiveTab(null);
+      setShowForm(false);
+      setShowPerson(true);
+      setShowState(0);
     }
+  }
 
   return (
     <div className="profile-container">
@@ -65,7 +65,6 @@ export default function Profile({ addEvent }) {
         >
           Post Event
         </button>
-
       </div>
 
       {showForm && <Form addEvent={addEvent} userID={userID} />}

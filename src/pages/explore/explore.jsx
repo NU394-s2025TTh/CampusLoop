@@ -6,7 +6,6 @@ import { fetchEvents } from "../../context/api";
 import BrowseCategories from "../../components/BrowseCategories/BrowseCategories";
 import { useNavigate } from "react-router-dom";
 
-
 function Explore() {
   // const { addSavedEvent } = useSavedEvents();
   const navigate = useNavigate();
@@ -50,7 +49,6 @@ function Explore() {
 
       <SearchBar events={events} />
       {/*<BrowseCategories events={events} />*/}
-
     </div>
   );
 }

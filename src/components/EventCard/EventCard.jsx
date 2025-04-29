@@ -77,7 +77,9 @@ export function EventCard({
       </div>
 
       <div className="event-card-content">
-        <h1 className="event-name" title={name}>{name}</h1>
+        <h1 className="event-name" title={name}>
+          {name}
+        </h1>
       </div>
     </div>
   );

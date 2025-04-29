@@ -1,19 +1,28 @@
 // src/components/SearchBar/searchbar.jsx
 import React, { useState } from "react";
 import algoliasearch from "algoliasearch/lite";
-import { InstantSearch, SearchBox, Hits, Configure, useInstantSearch } from "react-instantsearch";
+import {
+  InstantSearch,
+  SearchBox,
+  Hits,
+  Configure,
+  useInstantSearch,
+} from "react-instantsearch";
 import "./searchbar.css";
 import { EventCard } from "../EventCard/EventCard";
 import BrowseCategories from "../../components/BrowseCategories/BrowseCategories";
 
-
-{/* Regular Algolia Client */}
+{
+  /* Regular Algolia Client */
+}
 const algoliaClient = algoliasearch(
   "ZMCX8B53ID",
   "a9efa54725a3aada722387ede2634154",
 );
 
-{/* Proxy Client to prevent empty searches */}
+{
+  /* Proxy Client to prevent empty searches */
+}
 const searchClient = {
   ...algoliaClient,
   search(requests) {
@@ -28,8 +37,8 @@ const searchClient = {
           processingTimeMS: 0,
           hitsPerPage: 0,
           exhaustiveNbHits: false,
-          query: '',
-          params: '',
+          query: "",
+          params: "",
         })),
       });
     }
@@ -62,7 +71,14 @@ function SearchContent({ events }) {
       <div className="search-hits">
         {/* Optional: show a "No results for..." message if the user actually typed something */}
         {query.trim() !== "" && (
-          <p style={{ marginBottom: "1rem", fontSize: "1rem", fontWeight: "500", textAlign: "center" }}>
+          <p
+            style={{
+              marginBottom: "1rem",
+              fontSize: "1rem",
+              fontWeight: "500",
+              textAlign: "center",
+            }}
+          >
             No results for <q>{query}</q>
           </p>
         )}
@@ -78,14 +94,9 @@ function SearchContent({ events }) {
   );
 }
 
-
-export default function SearchBar({events}) {
+export default function SearchBar({ events }) {
   return (
-    <InstantSearch
-      searchClient={searchClient}
-      indexName="campusloop_events"
-    >
-
+    <InstantSearch searchClient={searchClient} indexName="campusloop_events">
       <div className="search-section">
         <SearchBox
           placeholder="Search for an event…"
@@ -96,15 +107,14 @@ export default function SearchBar({events}) {
           resetIconComponent={() => null}
           autoFocus
           classNames={{
-            submit: 'hidden',
-            reset: 'hidden'
+            submit: "hidden",
+            reset: "hidden",
           }}
         />
       </div>
 
-      <Configure hitsPerPage={20}/>
+      <Configure hitsPerPage={20} />
       <SearchContent events={events} />
-
     </InstantSearch>
   );
 }
