@@ -1,35 +1,24 @@
-import React, { useState, useEffect } from "react";
+// src/pages/saved/Saved.jsx
+import React from "react";
 import { EventCard } from "../../components/EventCard/EventCard";
-import "./saved.css"; // Optional if you want custom styling
 import { CiBookmarkRemove } from "react-icons/ci";
-import { fetchEvents } from "../../context/api";
+import { useSavedEvents } from "../../context/SavedEventsContext";
+import "./saved.css";
 
 export default function Saved() {
-  const [savedEvents, setSavedEvents] = useState([]);
-
-  useEffect(() => {
-    (async () => {
-      const all = await fetchEvents();
-      setSavedEvents(all.filter((e) => e.Saved));
-    })();
-  }, []);
-
-  const handleRemove = (id) => {
-    // If you persist removals to your backend, do it here.
-    // Then update local state:
-    setSavedEvents((prev) => prev.filter((e) => e.id !== id));
-  };
+  const { savedEvents, removeSavedEvent } = useSavedEvents();
 
   return (
     <div className="saved-container">
-      <h2 className="saved-title">Saved Events!</h2>
+      <h2 className="saved-title">Saved Events</h2>
       <div className="saved-grid">
         {savedEvents.length === 0 ? (
-          <p style={{ color: "white" }}>No saved events.</p>
+          <p className="no-saved">You haven’t saved any events yet.</p>
         ) : (
           savedEvents.map((event) => (
             <EventCard
               key={event.id}
+              id={event.id}
               image={event.image}
               name={event.name}
               date={event.date}
@@ -37,7 +26,7 @@ export default function Saved() {
               location={event.location}
               description={event.description}
               linkToTicket={event.linkToTicket}
-              onActionClick={() => handleRemove(event.id)}
+              onActionClick={() => removeSavedEvent(event.id)}
               actionIcon={<CiBookmarkRemove />}
             />
           ))

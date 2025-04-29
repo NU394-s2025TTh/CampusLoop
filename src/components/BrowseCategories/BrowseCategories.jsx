@@ -22,6 +22,7 @@ function BrowseCategories({ events }) {
               {eventsForCat.map((event) => (
                 <EventCard
                   key={event.id}
+                  id={event.id}
                   image={event.LinktoImage}
                   name={event.EventName}
                   date={event.Date}
