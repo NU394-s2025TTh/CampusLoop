@@ -1,4 +1,9 @@
-/* Search & Filter Section */
+/* Search */
+.explore-title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .search-section {
   margin-bottom: 1.5rem;
   display: flex;
@@ -6,50 +11,23 @@
   gap: 0.5rem;
 }
 
-.search-input {
-  width: 100%;
-  padding: 0.9rem;
-  border: none;
-  border-radius: 6px;
-  background-color: #333;
-  color: #fff;
-  font-size: 0.9rem;
+.ais-Hits-list {
+  list-style: none; /* Remove 1., 2., 3. numbers */
+  padding: 0;
+  margin: 0;
+  margin-left: 1rem;
+  margin-bottom: 3rem;
+  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* grid layout */
+  gap: 1rem; /* space between EventCards */
 }
 
-.search-input::placeholder {
-  color: #aaa;
+.hidden {
+  display: none;
 }
 
-.search-input::placeholder {
-  color: #786e90;
-}
 
-/* Filter Bar for the small 'chips' */
-.filter-bar {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.filter-chip {
-  flex: 1;
-  background-color: #efeafe;
-  border: none;
-  border-radius: 8px;
-  padding: 0.5rem;
-  text-align: center;
-  font-size: 0.8rem;
-  color: #4f327b;
-  cursor: pointer;
-}
-
-.filter-chip:hover {
-  background-color: #e2d4fb;
-}
-
-.explore-title {
-  margin-top: 1rem;
-  margin-bottom: 0;
-}
 
 /* Browse Title */
 .browse-title {
@@ -78,83 +56,10 @@
   overflow: hidden;
 }
 
-/* Example backgrounds for sports and performance cards */
-.sports-card {
-  background: url("https://via.placeholder.com/400x150/FFF/000?text=Sports+Image")
-    center/cover no-repeat;
-  color: #fff;
-}
-
-.performance-card {
-  background: url("https://via.placeholder.com/400x150/FFF/000?text=Performance+Image")
-    center/cover no-repeat;
-  color: #fff;
-}
-
 /* Text overlay on the category cards */
 .category-label {
   z-index: 2;
   font-size: 1rem;
   font-weight: 600;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-/* Bottom Navigation Bar */
-.bottom-nav {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 400px; /* match your container's width for consistency */
-  max-width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #efeafe;
-  padding: 0.5rem 0;
-  border-top: 1px solid #ddd;
-}
-
-.nav-icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #4f327b;
-  font-size: 0.8rem;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.nav-icon i {
-  margin-bottom: 0.25rem;
-}
-
-.nav-icon:hover {
-  color: #3c2561;
-}
-
-.search-input::placeholder {
-  color: #786e90;
-}
-
-/* Filter Bar for the small 'chips' */
-.filter-bar {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.filter-chip {
-  flex: 1;
-  background-color: #efeafe;
-  border: none;
-  border-radius: 8px;
-  padding: 0.5rem;
-  text-align: center;
-  font-size: 0.8rem;
-  color: #4f327b;
-  cursor: pointer;
-}
-
-.filter-chip:hover {
-  background-color: #e2d4fb;
 }
