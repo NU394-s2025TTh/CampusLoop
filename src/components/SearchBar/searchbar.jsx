@@ -7,7 +7,7 @@ import { EventCard } from "../EventCard/EventCard";
 
 const searchClient = algoliasearch(
   "ZMCX8B53ID",
-  "a9efa54725a3aada722387ede2634154"
+  "a9efa54725a3aada722387ede2634154",
 );
 
 function Hit({ hit }) {
@@ -25,7 +25,6 @@ function Hit({ hit }) {
   );
 }
 
-
 export default function SearchBar() {
   return (
     <InstantSearch
@@ -41,7 +40,6 @@ export default function SearchBar() {
             <div className={classNames.submitIcon}></div>
           )}
           autoFocus
-
         />
       </div>
       <Configure hitsPerPage={20} />
