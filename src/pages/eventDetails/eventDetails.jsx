@@ -1,24 +1,57 @@
+// src/pages/eventDetails/eventDetails.jsx
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import "./EventDetails.css"; // optional if you want styling
+import { useSavedEvents } from "../../context/SavedEventsContext";
+import { CiBookmark, CiBookmarkRemove } from "react-icons/ci";
+import "./EventDetails.css";
 
-function EventDetails() {
+export default function EventDetails() {
   const { state } = useLocation();
   const navigate = useNavigate();
+  const { savedEvents, addSavedEvent, removeSavedEvent } = useSavedEvents();
 
   if (!state) {
     return <p>No event data found.</p>;
   }
 
-  const { image, name, date, time, location, description, linkToTicket } =
-    state;
+  const {
+    id,
+    image,
+    name,
+    date,
+    time,
+    location,
+    description,
+    linkToTicket,
+  } = state;
+
+  // Check if this event is already saved
+  const isSaved = savedEvents.some((e) => e.id === id);
+
+  const handleSaveToggle = () => {
+    if (isSaved) {
+      removeSavedEvent(id);
+    } else {
+      // add the full event object
+      addSavedEvent({ id, image, name, date, time, location, description, linkToTicket });
+    }
+  };
 
   return (
     <div className="event-details-container">
       <button onClick={() => navigate(-1)} className="back-button">
-        {" "}
-        ← Back{" "}
+        ← Back
       </button>
+
+      {/* Save/Unsave button */}
+      <button
+        onClick={handleSaveToggle}
+        className={`save-button ${isSaved ? "saved" : ""}`}
+      >
+        {isSaved ? <CiBookmarkRemove /> : <CiBookmark />}{" "}
+        {isSaved ? "Unsave" : "Save"}
+      </button>
+
       <img src={image} alt={name} className="event-details-image" />
       <h1 className="event-details-title">{name}</h1>
       <p className="event-details-datetime">
@@ -39,5 +72,3 @@ function EventDetails() {
     </div>
   );
 }
-
-export default EventDetails;

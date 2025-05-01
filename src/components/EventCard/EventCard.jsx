@@ -21,7 +21,7 @@ export function EventCard({
 
   const handleCardClick = () => {
     navigate("/event-details", {
-      state: { image, name, date, time, location, description, linkToTicket },
+      state: { id, image, name, date, time, location, description, linkToTicket },
     });
   };
 

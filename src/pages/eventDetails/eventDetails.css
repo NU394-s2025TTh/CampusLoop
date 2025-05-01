@@ -1,10 +1,10 @@
 /* Container for the entire event details page */
 .event-details-container {
-  max-width: 500px;
-  margin: 1.5rem auto; /* Centers container with vertical spacing */
+  position: relative;
   padding: 1.5rem;
-  color: #fff; /* White text on dark */
-  border-radius: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+  color: #fff;
   box-sizing: border-box;
 }
 
@@ -68,4 +68,35 @@
 /* Hover effect for the ticket link */
 .event-details-ticket-link:hover {
   background-color: #b00610; /* darken the red on hover */
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.save-button {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background-color: rgba(255,255,255,0.1);
+  border: none;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.save-button:hover {
+  background-color: rgba(255,255,255,0.2);
+}
+.save-button.saved {
+  background-color: #e50914; /* red to indicate “saved” */
 }
