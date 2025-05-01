@@ -25,7 +25,6 @@ export function NavBar() {
         <Link to="/profile" className="nav-icon">
           <IoPerson className="icon" />
         </Link>
-        
       </footer>
     </div>
   );

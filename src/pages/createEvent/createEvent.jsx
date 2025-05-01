@@ -15,7 +15,6 @@ export default function CreateEvent() {
   const navigate = useNavigate();
 
   async function handleSubmit(e) {
-    
     e.preventDefault();
     const formData = new FormData(e.target);
 
@@ -33,7 +32,10 @@ export default function CreateEvent() {
 
     const imageFile = formData.get("image");
     if (imageFile && imageFile.name) {
-      const imageRef = ref(storage, `event_images/${Date.now()}_${imageFile.name}`);
+      const imageRef = ref(
+        storage,
+        `event_images/${Date.now()}_${imageFile.name}`,
+      );
       await uploadBytes(imageRef, imageFile);
       newEvent.LinktoImage = await getDownloadURL(imageRef);
     }
@@ -46,15 +48,12 @@ export default function CreateEvent() {
     } catch (err) {
       console.error("Error adding event:", err);
     }
-
   }
 
   return (
     <div className="create-event-container">
       {showSuccess && (
-        <div className="success-popup">
-          🎉 Your event has been created!
-        </div>
+        <div className="success-popup">🎉 Your event has been created!</div>
       )}
       <form className="create-event-form" onSubmit={handleSubmit}>
         <h2>Post a New Event</h2>

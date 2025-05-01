@@ -52,9 +52,7 @@ export default function Profile({ addEvent }) {
         <div className="profile-header">
           <UserButton appearance={userButtonAppearance} />
         </div>
-        <span className="profile-username">
-          Your Events
-        </span>
+        <span className="profile-username">Your Events</span>
       </SignedIn>
 
       {/* ★ Tabs */}
