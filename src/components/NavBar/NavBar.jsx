@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { FaBookmark } from "react-icons/fa6";
+import { FaRegPlusSquare } from "react-icons/fa";
 import { IoPerson } from "react-icons/io5";
 
 export function NavBar() {
@@ -15,12 +16,16 @@ export function NavBar() {
         <Link to="/explore" className="nav-icon">
           <FaSearch className="icon" />
         </Link>
+        <Link to="/create-event" className="nav-icon">
+          <FaRegPlusSquare className="icon" />
+        </Link>
         <Link to="/saved" className="nav-icon">
           <FaBookmark className="icon" />
         </Link>
         <Link to="/profile" className="nav-icon">
           <IoPerson className="icon" />
         </Link>
+        
       </footer>
     </div>
   );

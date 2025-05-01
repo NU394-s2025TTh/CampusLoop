@@ -53,19 +53,19 @@ export default function Profile({ addEvent }) {
           <UserButton appearance={userButtonAppearance} />
         </div>
         <span className="profile-username">
-          Look at your past events <br></br>& post more
+          Your Events
         </span>
       </SignedIn>
 
       {/* ★ Tabs */}
-      <div className="profile-tabs">
+      {/* <div className="profile-tabs">
         <button
           className={activeTab === "create-event" ? "active-tab" : ""}
           onClick={() => handleTabClick("create-event")}
         >
           Post Event
         </button>
-      </div>
+      </div> */}
 
       {showForm && <Form addEvent={addEvent} userID={userID} />}
       {showPerson && <YourEvents userID={userID} />}

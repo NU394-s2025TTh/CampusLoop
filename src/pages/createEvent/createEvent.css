@@ -1,0 +1,106 @@
+/* src/pages/create-event/create-event.css */
+
+/* 1) Full-page purple background and center the form */
+.create-event-container {
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    background-color: #31264b;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+  }
+  
+  /* 2) White “card” look for the form */
+  .create-event-form {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 480px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+  }
+  
+  /* 3) Form title */
+  .create-event-form h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    color: #31264b;
+    text-align: center;
+  }
+  
+  /* 4) Labels */
+  .create-event-form label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    color: #31264b;
+  }
+  
+  /* 5) Inputs, textarea, select, file */
+  .create-event-form input[type="text"],
+  .create-event-form input[type="url"],
+  .create-event-form input[type="date"],
+  .create-event-form input[type="time"],
+  .create-event-form input[type="file"],
+  .create-event-form select,
+  .create-event-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #31264b;
+    background-color: #fafafa;
+    box-sizing: border-box;
+  }
+  
+  /* 6) Textarea height */
+  .create-event-form textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  /* 7) Required star */
+  .create-event-form .required {
+    color: #e50914;
+    margin-left: 0.25rem;
+  }
+  
+  /* 8) Submit button */
+  .create-event-form button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: #6c43b0;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .create-event-form button[type="submit"]:hover {
+    background-color: #5a37a0;
+  }
+  
+  /* 9) Success banner */
+  .success-popup {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4caf50;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    font-weight: 500;
+  }
+  
