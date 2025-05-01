@@ -29,7 +29,7 @@ function BrowseCategories({ events }) {
                   time={event.Time}
                   location={event.Location}
                   description={event.Description}
-                  linkToTicket={event.LinktoTicket}
+                  linkToTicket={event.LinktoTickets}
                   onActionClick={() => addSavedEvent(event)}
                   actionIcon={<CiBookmark />}
                 />

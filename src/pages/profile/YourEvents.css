@@ -7,6 +7,13 @@
   width: 100%;
 }
 
+
+.your-event-card p {
+  color: #555; /* Dark grey text */
+}
+
+
+
 .your-event-card {
   width: 100%;
   max-width: 600px;
@@ -82,4 +89,8 @@
 
 .your-event-card .delete:hover {
   background-color: #c62828 !important;
+}
+
+.your-events-list .text {
+  color: white !important;
 }

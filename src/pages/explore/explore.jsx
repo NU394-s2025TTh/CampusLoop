@@ -20,7 +20,7 @@ function Explore() {
         time: "5:00 PM ",
         location: "Tech Aud",
         description: "Come see our startups pitch their ideas!",
-        linkToTicket: "",
+        linkToTickets: "",
       },
     });
   };

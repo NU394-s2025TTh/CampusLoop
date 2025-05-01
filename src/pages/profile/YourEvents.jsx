@@ -70,7 +70,7 @@ export default function YourEvents({ userID }) {
   return (
     <div className="your-events-list">
       {events.length === 0 ? (
-        <p>No Events</p>
+        <p className="text">No Events</p>
       ) : (
         events.map((event) => (
           <div className="your-event-card" key={event.id}>
